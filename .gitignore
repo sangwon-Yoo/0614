@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# jetbrain
+/.idea/
+
 # production
 /build
 
