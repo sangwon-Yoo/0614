@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
-import { SwiperModule } from 'swiper/types';
 import { SwiperContainer } from 'swiper/element';
 
 export default function Page0614() {
@@ -52,6 +51,11 @@ export default function Page0614() {
               alt={'메인 사진'}
               className={'object-cover'}
             />
+            <div className={'font-black absolute bottom-40 text-white'}>안녕하세요</div>
+            <div className={'font-bold absolute bottom-32 text-white'}>안녕하세요</div>
+            <div className={'font-medium absolute bottom-20 text-white'}>안녕하세요</div>
+            <div className={'font-normal absolute bottom-10 text-white'}>안녕하세요</div>
+            <div className={'font-light absolute bottom-0 text-white'}>안녕하세요</div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
