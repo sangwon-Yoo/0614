@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 
 export default function TemplateSpring({ children }: { children: ReactNode }) {
   return (
-    <body className={`font-gowunBatang antialiased flex flex-row justify-center bg-rose-50`}>
+    <body className={`font-gowunBatang antialiased flex flex-row justify-center bg-slate-100`}>
       <div className={'h-screen w-screen max-w-screen-sm'}>
         {children}
       </div>

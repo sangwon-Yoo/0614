@@ -44,18 +44,29 @@ export default function Page0614() {
       >
         <SwiperSlide>
           <div className={'relative h-full'}>
-            <Image
-              fill={true}
-              src="/gallery/main.jpg"
-              sizes="(max-width: 640px) 100vw"
-              alt={'메인 사진'}
-              className={'object-cover'}
-            />
-            <div className={'font-black absolute bottom-40 text-white'}>안녕하세요</div>
-            <div className={'font-bold absolute bottom-32 text-white'}>안녕하세요</div>
-            <div className={'font-medium absolute bottom-20 text-white'}>안녕하세요</div>
-            <div className={'font-normal absolute bottom-10 text-white'}>안녕하세요</div>
-            <div className={'font-light absolute bottom-0 text-white'}>안녕하세요</div>
+            <div className={'relative h-full'}>
+              <Image
+                fill={true}
+                src="/gallery/main.jpg"
+                sizes="(max-width: 640px) 100vw"
+                alt={'메인 사진'}
+                className={'object-cover'}
+              />
+              <div className={'absolute h-full w-full bg-gradient-to-t from-[#000000AA] via-transparent via-25%'} aria-hidden={true}></div>
+            </div>
+            <div className={'absolute w-full top-4 h-40'}>
+              <Image
+                fill={true}
+                src={"/svg/gettingMarried.svg"}
+                alt={`we're getting married`}
+                className={'object-contain'}
+              />
+            </div>
+            <div className={'absolute text-lg font-medium w-full flex flex-col items-center bottom-20 text-white'}>
+              <div>허현정 &#x2665; 유상원</div>
+              <div>2025년 6월 14일</div>
+              <div>엘리에나 호텔, 3F, 임페리얼 홀</div>
+            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
