@@ -31,7 +31,7 @@ export default function Page0614() {
 
   return (
     <>
-      <div className={`${displayDim ? 'block' : 'hidden'} fixed z-50 inset-0 transition-opacity ease-linear delay-1000 duration-1000 bg-white ${transparentDim ? 'opacity-0' : ''}`} />
+      {/*<div className={`${displayDim ? 'block' : 'hidden'} fixed z-50 inset-0 transition-opacity ease-linear delay-1000 duration-1000 bg-white ${transparentDim ? 'opacity-0' : ''}`} aria-hidden={true} />*/}
       <Swiper
         allowSlidePrev={allowSlidePrev}
         allowSlideNext={allowSlideNext}
@@ -55,12 +55,7 @@ export default function Page0614() {
               <div className={'absolute h-full w-full bg-gradient-to-t from-[#000000AA] via-transparent via-25%'} aria-hidden={true}></div>
             </div>
             <div className={'absolute w-full top-4 h-40'}>
-              <Image
-                fill={true}
-                src={"/svg/gettingMarried.svg"}
-                alt={`we're getting married`}
-                className={'object-contain'}
-              />
+              <GettingMarried />
             </div>
             <div className={'absolute text-lg font-medium w-full flex flex-col items-center bottom-20 text-white'}>
               <div>허현정 &#x2665; 유상원</div>
