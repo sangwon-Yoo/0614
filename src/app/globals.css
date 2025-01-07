@@ -17,6 +17,13 @@
     font-display: swap;
     src: url(/font/GowunBatang-Bold.ttf) format('truetype');
   }
+  @font-face {
+    font-family: 'GreatVibes';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/font/GreatVibes-Regular.ttf) format('truetype');
+  }
 }
 
 :root {
