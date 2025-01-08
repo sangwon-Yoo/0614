@@ -5,6 +5,7 @@ import 'swiper/css';
 import { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { SwiperContainer } from 'swiper/element';
+import { motion } from 'framer-motion';
 
 export default function Page0614() {
 
@@ -60,11 +61,19 @@ export default function Page0614() {
                 aria-hidden={true}
               />
             </div>
+
             <div className={'absolute flex justify-center items-center w-full top-12'}>
-              <span className={'font-greatVibes text-white text-4xl'}>
+
+              <motion.span
+                className={'flex-none text-center font-greatVibes drop-shadow-md text-white text-4xl overflow-hidden whitespace-nowrap'}
+                initial={{ width: '0' }}
+                animate={{ width: '100%' }}
+                transition={{ duration: 2, ease: 'easeOut', delay: 1.5 }}
+              >
                 {`We're getting married.`}
-              </span>
+              </motion.span>
             </div>
+
             <div className={'absolute text-lg font-medium w-full flex flex-col items-center bottom-20 text-white'}>
               <div>허현정 &#x2665; 유상원</div>
               <div>2025년 6월 14일</div>
