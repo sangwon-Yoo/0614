@@ -6,6 +6,7 @@ import { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { SwiperContainer } from 'swiper/element';
 import { motion } from 'framer-motion';
+import { ReactTyped } from 'react-typed';
 
 export default function Page0614() {
 
@@ -63,15 +64,14 @@ export default function Page0614() {
             </div>
 
             <div className={'absolute flex justify-center items-center w-full top-12'}>
-
-              <motion.span
-                className={'flex-none text-center font-greatVibes drop-shadow-md text-white text-4xl overflow-hidden whitespace-nowrap'}
-                initial={{ width: '0' }}
-                animate={{ width: '100%' }}
-                transition={{ duration: 2, ease: 'easeOut', delay: 1.5 }}
-              >
-                {`We're getting married.`}
-              </motion.span>
+              <ReactTyped
+                className={'text-center font-greatVibes drop-shadow-md text-white text-4xl'}
+                strings={[`We're getting married.`]}
+                typeSpeed={25}
+                contentType={'html'}
+                startDelay={1500}
+                showCursor={false}
+              />
             </div>
 
             <div className={'absolute text-lg font-medium w-full flex flex-col items-center bottom-20 text-white'}>
@@ -82,7 +82,43 @@ export default function Page0614() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={''}>2222</div>
+          <div className={'relative h-full flex flex-col'}>
+            <div className={'flex flex-col justify-center items-center flex-none h-24'}>
+              <span className={'font-greatVibes text-lg'}>Welcome</span>
+            </div>
+            <div className={'flex flex-col flex-1'}>
+              <div className={'flex-auto'}>
+                <p className={'whitespace-nowrap text-center leading-8 mb-6'}>
+                  {'저희 두 사람이'}<br />
+                  {'평생을 함께하기 위해'}<br />
+                  {'서로의 반려자가 되려 합니다.'}<br />
+                </p>
+                <p className={'whitespace-nowrap text-center leading-8 mb-6'}>
+                  {'그 진실 서약을 하는 자리에'}<br />
+                  {'소중한 분들을 모십니다.'}<br />
+                </p>
+                <div className={'flex flex-row justify-center'}>
+                  <p className={'whitespace-nowrap mb-6 flex-none w-48 leading-7'}>
+                    <span className={'font-bold'}>{' 유 진 재 '}</span>
+                    &#183;
+                    <span className={'font-bold'}>{' 윤 혜 정 '}</span>
+                    {'의 아들'}
+                    <br />
+                    <span className={'font-bold'}>{' 허 만 인 '}</span>
+                    &#183;
+                    <span className={'font-bold'}>{' 이 정 자 '}</span>
+                    {'의 딸'}
+                  </p>
+                  <p className={'whitespace-nowrap mb-6 flex-none w-14 leading-7'}>
+                    <span className={'font-bold'}>{' 유 상 원 '}</span>
+                    <br />
+                    <span className={'font-bold'}>{' 허 현 정 '}</span>
+                  </p>
+                </div>
+              </div>
+              <div className={'flex-auto'}></div>
+            </div>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={''}>3333</div>
