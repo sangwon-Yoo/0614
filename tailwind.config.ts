@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        gowunBatang: ["GowunBatang", "sans-serif", "Arial"],
+        greatVibes: ["GreatVibes", "sans-serif", "Arial"],
+      }
     },
   },
   plugins: [],

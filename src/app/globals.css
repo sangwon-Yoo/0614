@@ -2,20 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: 'GowunBatang';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/font/GowunBatang-Regular.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'GowunBatang';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/font/GowunBatang-Bold.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'GreatVibes';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/font/GreatVibes-Regular.ttf) format('truetype');
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+}*/
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /*font-family: Arial, Helvetica, sans-serif;*/
 }
