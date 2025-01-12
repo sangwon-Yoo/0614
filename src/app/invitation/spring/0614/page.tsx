@@ -4,9 +4,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { useCallback, useEffect, useState } from 'react';
 import { SwiperContainer } from 'swiper/element';
-import CardMain from '@/feature/spring/CardMain';
-import CardDate from '@/feature/spring/CardDate';
-import CardWelcome from '@/feature/spring/CardWelcome';
+import CardMain from '@/components/spring/CardMain';
+import CardDate from '@/components/spring/CardDate';
+import CardWelcome from '@/components/spring/CardWelcome';
 
 export default function Page0614() {
   const [transparentDim, setTransparentDim] = useState(false);
