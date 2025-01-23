@@ -1,9 +1,7 @@
-import { useSwiper } from 'swiper/react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-export default function CardWelcome() {
-  const swiper = useSwiper();
+export default function CardWelcome({currentSlideIndex}: {currentSlideIndex: number}) {
 
   return (
     <div className={'relative h-full flex flex-col'}>
@@ -15,7 +13,7 @@ export default function CardWelcome() {
       <div className={'flex flex-col justify-between flex-1'}>
         <motion.div
           className={'flex-none'}
-          key={`welcome-0-${swiper.activeIndex}`}
+          key={`welcome-0-${currentSlideIndex}`}
           initial={{ y: 25, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: 'easeOut' }}
@@ -50,7 +48,7 @@ export default function CardWelcome() {
         </div>
         <motion.div
           className={'flex-none flex flex-row justify-center'}
-          key={`welcome-1-${swiper.activeIndex}`}
+          key={`welcome-1-${currentSlideIndex}`}
           initial={{ y: 25, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
@@ -74,7 +72,7 @@ export default function CardWelcome() {
         </motion.div>
         <motion.div
           className={'flex-none'}
-          key={`welcome-2-${swiper.activeIndex}`}
+          key={`welcome-2-${currentSlideIndex}`}
           initial={{ y: 25, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}

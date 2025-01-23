@@ -1,11 +1,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { useSwiper } from 'swiper/react';
-import { ReactTyped } from 'react-typed';
 
-export default function CardDate() {
-
-  const swiper = useSwiper();
+export default function CardDate({currentSlideIndex}: {currentSlideIndex: number}) {
 
   const monthDays: Array<{ date: number, day: 'sun' | 'sat' | 'weekdays', theDay?: boolean}> = [
     { date : 1, day : 'sun'}, { date : 2, day : 'weekdays'}, { date : 3, day : 'weekdays'}, { date : 4, day : 'weekdays'}, { date : 5, day : 'weekdays'}, { date : 6, day : 'weekdays'}, { date : 7, day : 'sat'},
@@ -27,7 +23,7 @@ export default function CardDate() {
         <div className={'flex justify-center items-center flex-initial h-1/6'}>
           <motion.span
             className={'font-bold'}
-            key={`date-0-${swiper.activeIndex}`}
+            key={`date-0-${currentSlideIndex}`}
             initial={{ y: 25, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: 'easeOut' }}
@@ -48,7 +44,7 @@ export default function CardDate() {
                   {day.theDay && (
                     <motion.div
                       className={'absolute'}
-                      key={`date-1-${swiper.activeIndex}`}
+                      key={`date-1-${currentSlideIndex}`}
                       initial={{ y: 25, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
@@ -74,16 +70,20 @@ export default function CardDate() {
           </div>
         </div>
 
-        <div className={'flex flex-col justify-start items-center flex-initial h-2/6'}>
-          <motion.span
-            key={`date-2-${swiper.activeIndex}`}
+        <div className={'flex flex-col justify-center items-center flex-initial h-2/6'}>
+          <motion.div
+            key={`date-2-${currentSlideIndex}`}
             initial={{ y: 25, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
-            className={'mt-6 text-3xl'}
           >
-            {`d - 78`}
-          </motion.span>
+            <span className={'font-greatVibes mt-6 text-3xl'}>
+              {`D`}
+            </span>
+            <span className={'mt-6 text-xl'}>
+              {` - 78`}
+            </span>
+          </motion.div>
         </div>
 
       </div>

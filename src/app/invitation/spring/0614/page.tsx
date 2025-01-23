@@ -7,12 +7,15 @@ import { SwiperContainer } from 'swiper/element';
 import CardMain from '@/components/spring/CardMain';
 import CardDate from '@/components/spring/CardDate';
 import CardWelcome from '@/components/spring/CardWelcome';
+import CardGallery from '@/components/spring/CardGallery';
 
 export default function Page0614() {
   const [transparentDim, setTransparentDim] = useState(false);
   const [displayDim, setDisplayDim] = useState(true);
   const [allowSlidePrev, setAllowSlidePrev] = useState(true);
   const [allowSlideNext, setAllowSlideNext] = useState(true);
+
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
   useEffect(() => {
     setTransparentDim(true);
@@ -50,7 +53,10 @@ export default function Page0614() {
         direction={'vertical'}
         resistance={false}
         slidesPerView={1}
-        onSlideChange={swiper => blockSwipeOnEdge(swiper)}
+        onSlideChange={swiper => {
+          setCurrentSlideIndex(swiper.activeIndex);
+          blockSwipeOnEdge(swiper);
+        }}
         onSwiper={swiper => blockSwipeOnEdge(swiper)}
         className={'h-svh'}
       >
@@ -58,10 +64,13 @@ export default function Page0614() {
           <CardMain />
         </SwiperSlide>
         <SwiperSlide>
-          <CardWelcome />
+          <CardWelcome currentSlideIndex={currentSlideIndex} />
         </SwiperSlide>
         <SwiperSlide>
-          <CardDate />
+          <CardDate currentSlideIndex={currentSlideIndex} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CardGallery />
         </SwiperSlide>
       </Swiper>
     </>
