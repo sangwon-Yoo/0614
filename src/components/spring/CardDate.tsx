@@ -30,7 +30,7 @@ export default function CardDate() {
             key={`date-0-${swiper.activeIndex}`}
             initial={{ y: 25, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
+            transition={{ duration: 1, ease: 'easeOut' }}
           >
             2025년 06월 오후 2시 30분
           </motion.span>
@@ -75,15 +75,15 @@ export default function CardDate() {
         </div>
 
         <div className={'flex flex-col justify-start items-center flex-initial h-2/6'}>
-          <div className={'font-greatVibes mt-6'}>
-            {(swiper.activeIndex == 2) && <ReactTyped
-              className={'text-3xl'}
-              strings={[`d-78`]}
-              typeSpeed={160}
-              contentType={'html'}
-              showCursor={false}
-            />}
-          </div>
+          <motion.span
+            key={`date-2-${swiper.activeIndex}`}
+            initial={{ y: 25, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
+            className={'mt-6 text-3xl'}
+          >
+            {`d - 78`}
+          </motion.span>
         </div>
 
       </div>
