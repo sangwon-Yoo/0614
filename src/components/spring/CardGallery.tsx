@@ -18,7 +18,7 @@ export default function CardGallery() {
             <Image
               fill={true}
               src="/gallery/cards/safari01.jpg"
-              sizes="(max-width: 640px) 100vw"
+              sizes="(max-width: 640px) 100vw, 640px"
               alt={'메인 사진'}
               className={'object-cover rounded-md'}
             />
@@ -27,7 +27,7 @@ export default function CardGallery() {
             <Image
               fill={true}
               src="/gallery/cards/safari02.jpeg"
-              sizes="(max-width: 640px) 100vw"
+              sizes="(max-width: 640px) 100vw, 640px"
               alt={'메인 사진'}
               className={'object-cover rounded-md'}
             />
@@ -36,7 +36,7 @@ export default function CardGallery() {
             <Image
               fill={true}
               src="/gallery/cards/safari03.jpg"
-              sizes="(max-width: 640px) 100vw"
+              sizes="(max-width: 640px) 100vw, 640px"
               alt={'메인 사진'}
               className={'object-cover rounded-md'}
             />
@@ -45,7 +45,7 @@ export default function CardGallery() {
             <Image
               fill={true}
               src="/gallery/cards/safari04.jpeg"
-              sizes="(max-width: 640px) 100vw"
+              sizes="(max-width: 640px) 100vw, 640px"
               alt={'메인 사진'}
               className={'object-cover rounded-md'}
             />
@@ -54,7 +54,7 @@ export default function CardGallery() {
             <Image
               fill={true}
               src="/gallery/cards/safari05.jpeg"
-              sizes="(max-width: 640px) 100vw"
+              sizes="(max-width: 640px) 100vw, 640px"
               alt={'메인 사진'}
               className={'object-cover rounded-md'}
             />

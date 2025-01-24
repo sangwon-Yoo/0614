@@ -8,7 +8,7 @@ export default function CardMain() {
         <Image
           fill={true}
           src="/gallery/main.jpg"
-          sizes="(max-width: 640px) 100vw"
+          sizes="(max-width: 640px) 100vw, 640px"
           alt={'메인 사진'}
           className={'object-cover'}
         />

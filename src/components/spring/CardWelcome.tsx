@@ -37,7 +37,7 @@ export default function CardWelcome({currentSlideIndex}: {currentSlideIndex: num
           <Image
             src="/image/bouquet/bouquet-1.png"
             alt={'bouquet1'}
-            sizes="(max-width: 640px) 81px"
+            sizes="81px"
             width={1}
             height={1}
             style={{

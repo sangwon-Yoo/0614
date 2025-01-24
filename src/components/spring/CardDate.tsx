@@ -52,7 +52,7 @@ export default function CardDate({currentSlideIndex}: {currentSlideIndex: number
                       <Image
                         src="/image/heart/heart-2.png"
                         alt={'heart1'}
-                        sizes="(max-width: 640px) 56px"
+                        sizes="56px"
                         width={1}
                         height={1}
                         style={{
