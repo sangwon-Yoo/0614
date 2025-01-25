@@ -74,7 +74,7 @@ export default function CardWelcome({currentSlideIndex}: {currentSlideIndex: num
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
         >
-          <p className={'whitespace-nowrap text-center leading-8 mb-6'}>
+          <p className={'whitespace-nowrap text-center leading-8 mb-8'}>
             {'2025년 6월 14일 오후 2시 30분'}
             <br />
             {'엘리에나 호텔, 3F 임페리얼 홀'}
