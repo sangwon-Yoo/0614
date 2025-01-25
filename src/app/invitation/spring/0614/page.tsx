@@ -58,7 +58,7 @@ export default function Page0614() {
           blockSwipeOnEdge(swiper);
         }}
         onSwiper={swiper => blockSwipeOnEdge(swiper)}
-        className={'h-svh'}
+        className={'h-full'}
       >
         <SwiperSlide>
           <CardMain />
