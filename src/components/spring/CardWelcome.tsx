@@ -26,7 +26,7 @@ export default function CardWelcome({currentSlideIndex}: {currentSlideIndex: num
             {'서로의 반려자가 되려 합니다.'}
             <br />
           </p>
-          <p className={'whitespace-nowrap text-center leading-8 mb-6'}>
+          <p className={'whitespace-nowrap text-center leading-8'}>
             {'그 진실 서약을 하는 자리에'}
             <br />
             {'소중한 분들을 모십니다.'}
@@ -35,15 +35,12 @@ export default function CardWelcome({currentSlideIndex}: {currentSlideIndex: num
         </motion.div>
         <div className={'flex-none flex justify-center'}>
           <Image
-            src="/image/bouquet/bouquet-1.png"
-            alt={'bouquet1'}
-            sizes="81px"
+            src="/image/flower/rose-2.svg"
+            alt={'rose1'}
+            sizes="64px"
             width={1}
             height={1}
-            style={{
-              width: '81px',
-              height: 'auto',
-            }}
+            className={'w-16 h-auto'}
           />
         </div>
         <motion.div

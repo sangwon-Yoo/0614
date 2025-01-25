@@ -42,25 +42,14 @@ export default function CardDate({currentSlideIndex}: {currentSlideIndex: number
                   key={index}
                 >
                   {day.theDay && (
-                    <motion.div
-                      className={'absolute'}
-                      key={`date-1-${currentSlideIndex}`}
-                      initial={{ y: 25, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
-                    >
-                      <Image
-                        src="/image/heart/heart-2.png"
-                        alt={'heart1'}
-                        sizes="56px"
-                        width={1}
-                        height={1}
-                        style={{
-                          width: '56px',
-                          height: 'auto',
-                        }}
-                      />
-                    </motion.div>
+                    <Image
+                      src="/image/heart/heart-3.svg"
+                      alt={'heart1'}
+                      sizes="40px"
+                      width={1}
+                      height={1}
+                      className={'absolute w-10 h-auto'}
+                    />
                   )}
                   <span className={`z-10 ${day.theDay ? 'font-bold' : ''} ${day.day == 'sun' ? 'text-red-400' : ''} ${day.day == 'sat' ? 'text-blue-400' : ''}`}>{day.date}</span>
                 </div>
