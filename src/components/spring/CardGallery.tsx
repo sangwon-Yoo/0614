@@ -1,13 +1,18 @@
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { Dispatch, SetStateAction, useCallback, useEffect, useState } from 'react';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import 'swiper/css';
+import { SwiperContainer } from 'swiper/element';
 
 export default function CardGallery() {
 
   const [isPopGallery, setIsPopGallery] = useState<boolean>(false);
-
+  const [initGallerySwiperIndex, setInitGallerySwiperIndex] = useState(0);
   const swiper = useSwiper();
+  const openGallerySwiper = useCallback((initIndex: number) => {
+    setIsPopGallery(true);
+    setInitGallerySwiperIndex(initIndex);
+  }, []);
 
   useEffect(() => {
     if(isPopGallery) {
@@ -31,7 +36,7 @@ export default function CardGallery() {
           <p className={'text-center'}>사진을 눌러 보세요.</p>
         </div>
         <div className={'grid grid-rows-4 grid-cols-2 grid-flow-col gap-3 flex-1 mx-3 my-8'}>
-          <button onClick={() => setIsPopGallery(true)} className={'relative'}>
+          <button onClick={() => openGallerySwiper(0)} className={'relative'}>
             <Image
               fill={true}
               src="/gallery/cards/photo-1.jpeg"
@@ -40,7 +45,7 @@ export default function CardGallery() {
               className={'object-cover rounded-md'}
             />
           </button>
-          <button onClick={() => setIsPopGallery(true)} className={'relative row-span-2'}>
+          <button onClick={() => openGallerySwiper(1)} className={'relative row-span-2'}>
             <Image
               fill={true}
               src="/gallery/cards/photo-2.jpeg"
@@ -49,7 +54,7 @@ export default function CardGallery() {
               className={'object-cover rounded-md'}
             />
           </button>
-          <button onClick={() => setIsPopGallery(true)} className={'relative'}>
+          <button onClick={() => openGallerySwiper(2)} className={'relative'}>
             <Image
               fill={true}
               src="/gallery/cards/photo-3.jpeg"
@@ -58,7 +63,7 @@ export default function CardGallery() {
               className={'object-cover rounded-md'}
             />
           </button>
-          <button onClick={() => setIsPopGallery(true)} className={'relative row-span-2'}>
+          <button onClick={() => openGallerySwiper(3)} className={'relative row-span-2'}>
             <Image
               fill={true}
               src="/gallery/cards/photo-4.jpeg"
@@ -67,7 +72,7 @@ export default function CardGallery() {
               className={'object-cover rounded-md'}
             />
           </button>
-          <button onClick={() => setIsPopGallery(true)} className={'relative row-span-2'}>
+          <button onClick={() => openGallerySwiper(4)} className={'relative row-span-2'}>
             <Image
               fill={true}
               src="/gallery/cards/photo-5.jpeg"
@@ -79,14 +84,32 @@ export default function CardGallery() {
         </div>
       </div>
 
-      {isPopGallery && <GalleryPop onClose={() => setIsPopGallery(false)} />}
+      {isPopGallery && <GalleryPop initIndex={initGallerySwiperIndex} onClose={() => setIsPopGallery(false)} />}
     </div>
   );
 }
 
-function GalleryPop({onClose}: {onClose: () => void}) {
+type Swiper = SwiperContainer['swiper'] | null;
+
+function GalleryPop({initIndex, onClose}: {
+  initIndex: number;
+  onClose: () => void;
+}) {
 
   const [isTransparentModal, setIsTransparentModal] = useState(true);
+
+  const [swiperIndex, setSwiperIndex] = useState<number>(initIndex);
+  const [mainSwiper, setMainSwiper] = useState<Swiper>(null);
+  const [thumbSwiper, setThumbSwiper] = useState<Swiper>(null);
+
+  useEffect(() => {
+    if(mainSwiper && mainSwiper.activeIndex !== swiperIndex) {
+      mainSwiper.slideTo(swiperIndex);
+    }
+    if(thumbSwiper && thumbSwiper.activeIndex !== swiperIndex) {
+      thumbSwiper.slideTo(swiperIndex);
+    }
+  }, [swiperIndex, mainSwiper, thumbSwiper]);
 
   const photoList = [
     '/gallery/cards/photo-1.jpeg',
@@ -107,12 +130,12 @@ function GalleryPop({onClose}: {onClose: () => void}) {
 
   return (
     <div
-      className={`fixed z-50 inset-0 transition-opacity ease-linear duration-100 bg-black ${isTransparentModal ? 'opacity-0' : 'opacity-100'}`}
+      className={`fixed z-50 inset-0 transition-opacity ease-linear duration-200 bg-black ${isTransparentModal ? 'opacity-0' : 'opacity-100'}`}
     >
       <div className={'flex flex-col h-full'}>
         <div className={'flex justify-between flex-initial h-[10%]'}>
           <div className={'flex justify-center items-center flex-initial w-24'}>
-            <span className={'text-white'}>1 / 24</span>
+            <span className={'text-white'}>{`${swiperIndex + 1} / ${photoList.length}`}</span>
           </div>
           <div className={'flex justify-center items-center flex-initial w-16'}>
             <button
@@ -124,17 +147,33 @@ function GalleryPop({onClose}: {onClose: () => void}) {
           </div>
         </div>
         <div className={'flex-initial h-[75%]'}>
-          <SwiperGalleryCards photoList={photoList} />
+          <SwiperGalleryCards
+            photoList={photoList}
+            initIndex={initIndex}
+            setSwiper={setMainSwiper}
+            setSwiperIndex={setSwiperIndex}
+          />
         </div>
         <div className={'flex-initial h-[15%] px-2 py-2'}>
-          <SwiperGalleryThumbnail photoList={photoList} />
+          <SwiperGalleryThumb
+            photoList={photoList}
+            initIndex={initIndex}
+            setSwiper={setThumbSwiper}
+            swiperIndex={swiperIndex}
+            setSwiperIndex={setSwiperIndex}
+          />
         </div>
       </div>
     </div>
   );
 }
 
-function SwiperGalleryCards({photoList}: {photoList: Array<string>}) {
+function SwiperGalleryCards({photoList, initIndex, setSwiper, setSwiperIndex}: {
+  photoList: Array<string>;
+  initIndex: number;
+  setSwiper: Dispatch<SetStateAction<Swiper>>;
+  setSwiperIndex: Dispatch<SetStateAction<number>>;
+}) {
 
   const swiperSlideList = photoList.map((photo, index) => {
 
@@ -157,8 +196,9 @@ function SwiperGalleryCards({photoList}: {photoList: Array<string>}) {
     <Swiper
       slidesPerView={1}
       spaceBetween={24}
-      onSlideChange={swiper => {}}
-      onSwiper={swiper => {}}
+      initialSlide={initIndex}
+      onSwiper={(swiper) => setSwiper(swiper)}
+      onSlideChange={swiper => setSwiperIndex(swiper.activeIndex)}
       className={'h-full'}
     >
       {swiperSlideList}
@@ -166,21 +206,19 @@ function SwiperGalleryCards({photoList}: {photoList: Array<string>}) {
   );
 }
 
-function SwiperGalleryThumbnail({photoList}: {photoList: Array<string>}) {
+function SwiperGalleryThumb({photoList, initIndex, setSwiper, swiperIndex, setSwiperIndex}: {
+  photoList: Array<string>;
+  initIndex: number;
+  setSwiper: Dispatch<SetStateAction<Swiper>>;
+  swiperIndex: number;
+  setSwiperIndex: Dispatch<SetStateAction<number>>;
+}) {
 
   const swiperSlideList = photoList.map((photo, index) => {
 
     return (
       <SwiperSlide key={index} className={'!w-14'}>
-        <div className={'relative h-full'}>
-          <Image
-            fill={true}
-            src={photo}
-            sizes="56px"
-            alt={`갤리리 사진 ${index}`}
-            className={'object-contain'}
-          />
-        </div>
+        <SwiperSlideThumbContents src={photo} swiperIndex={swiperIndex} index={index} />
       </SwiperSlide>
     );
   });
@@ -189,12 +227,35 @@ function SwiperGalleryThumbnail({photoList}: {photoList: Array<string>}) {
     <Swiper
       slidesPerView={'auto'}
       centeredSlides={true}
+      resistance={false}
+      slideToClickedSlide={true}
       spaceBetween={4}
-      onSlideChange={swiper => {}}
-      onSwiper={swiper => {}}
+      initialSlide={initIndex}
+      speed={1000}
+      onSwiper={(swiper) => setSwiper(swiper)}
+      onSlideChange={swiper => setSwiperIndex(swiper.activeIndex)}
       className={'h-full'}
     >
       {swiperSlideList}
     </Swiper>
+  );
+}
+
+function SwiperSlideThumbContents({src, swiperIndex, index}: {
+  src: string;
+  swiperIndex: number;
+  index: number;
+}) {
+
+  return (
+    <div className={`relative h-full ${swiperIndex == index ? 'border-2 rounded-sm border-amber-100' : ''}`}>
+      <Image
+        fill={true}
+        src={src}
+        sizes="56px"
+        alt={`갤리리 썸네일 ${index}`}
+        className={'object-contain'}
+      />
+    </div>
   );
 }
