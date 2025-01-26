@@ -157,7 +157,6 @@ function SwiperGalleryCards({photoList}: {photoList: Array<string>}) {
     <Swiper
       slidesPerView={1}
       spaceBetween={24}
-      centeredSlides={true}
       onSlideChange={swiper => {}}
       onSwiper={swiper => {}}
       className={'h-full'}
@@ -189,6 +188,7 @@ function SwiperGalleryThumbnail({photoList}: {photoList: Array<string>}) {
   return (
     <Swiper
       slidesPerView={'auto'}
+      centeredSlides={true}
       spaceBetween={4}
       onSlideChange={swiper => {}}
       onSwiper={swiper => {}}
