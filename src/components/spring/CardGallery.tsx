@@ -248,7 +248,7 @@ function SwiperSlideThumbContents({src, swiperIndex, index}: {
 }) {
 
   return (
-    <div className={`relative h-full ${swiperIndex == index ? 'border-2 rounded-sm border-amber-100' : ''}`}>
+    <div className={`relative h-full bg-white ${swiperIndex == index ? 'border-2 rounded-sm border-amber-100' : ''}`}>
       <Image
         fill={true}
         src={src}
