@@ -28,7 +28,7 @@ export default function CardDate({currentSlideIndex}: {currentSlideIndex: number
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: 'easeOut' }}
           >
-            2025년 06월 오후 2시 30분
+            6월 14일 토요일 오후 2시 30분
           </motion.span>
         </div>
 
