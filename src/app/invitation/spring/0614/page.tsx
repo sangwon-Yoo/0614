@@ -8,6 +8,7 @@ import CardMain from '@/components/spring/CardMain';
 import CardDate from '@/components/spring/CardDate';
 import CardWelcome from '@/components/spring/CardWelcome';
 import CardGallery from '@/components/spring/CardGallery';
+import CardVenue from '@/components/spring/CardVenue';
 
 export default function Page0614() {
   const [transparentDim, setTransparentDim] = useState(false);
@@ -70,7 +71,10 @@ export default function Page0614() {
           <CardDate currentSlideIndex={currentSlideIndex} />
         </SwiperSlide>
         <SwiperSlide>
-          <CardGallery />
+          <CardGallery currentSlideIndex={currentSlideIndex} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CardVenue />
         </SwiperSlide>
       </Swiper>
     </>

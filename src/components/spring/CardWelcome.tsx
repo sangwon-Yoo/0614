@@ -77,7 +77,7 @@ export default function CardWelcome({currentSlideIndex}: {currentSlideIndex: num
           <p className={'whitespace-nowrap text-center leading-8 mb-8'}>
             {'2025년 6월 14일 오후 2시 30분'}
             <br />
-            {'엘리에나 호텔, 3F 임페리얼 홀'}
+            {'엘리에나호텔웨딩, 3F 임페리얼 홀'}
             <br />
           </p>
         </motion.div>

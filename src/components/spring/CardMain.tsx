@@ -42,7 +42,7 @@ export default function CardMain() {
       >
         <div>허현정 &#x2665; 유상원</div>
         <div>2025년 6월 14일 오후 2시 30분</div>
-        <div>엘리에나 호텔, 3F 임페리얼 홀</div>
+        <div>엘리에나호텔웨딩, 3F 임페리얼 홀</div>
       </div>
     </div>
   );

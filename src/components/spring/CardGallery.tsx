@@ -3,8 +3,9 @@ import { Dispatch, SetStateAction, useCallback, useEffect, useState } from 'reac
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import 'swiper/css';
 import { SwiperContainer } from 'swiper/element';
+import { motion } from 'framer-motion';
 
-export default function CardGallery() {
+export default function CardGallery({currentSlideIndex}: {currentSlideIndex: number}) {
 
   const [isPopGallery, setIsPopGallery] = useState<boolean>(false);
   const [initGallerySwiperIndex, setInitGallerySwiperIndex] = useState(0);
@@ -33,7 +34,15 @@ export default function CardGallery() {
       </div>
       <div className={'flex flex-col flex-1'}>
         <div className={'my-6'}>
-          <p className={'text-center'}>사진을 눌러 보세요.</p>
+          <motion.p
+            className={'text-center'}
+            key={`gallery-0-${currentSlideIndex}`}
+            initial={{ y: 25, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: 'easeOut' }}
+          >
+            사진을 눌러 보세요.
+          </motion.p>
         </div>
         <div className={'grid grid-rows-4 grid-cols-2 grid-flow-col gap-3 flex-1 mx-3 my-8'}>
           <button onClick={() => openGallerySwiper(0)} className={'relative'}>
