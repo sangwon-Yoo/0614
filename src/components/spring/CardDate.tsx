@@ -45,10 +45,9 @@ export default function CardDate({currentSlideIndex}: {currentSlideIndex: number
                     <Image
                       src="/image/heart/heart-3.svg"
                       alt={'heart1'}
-                      sizes="40px"
-                      width={1}
-                      height={1}
-                      className={'absolute w-10 h-auto'}
+                      width={40}
+                      height={40}
+                      className={'absolute'}
                     />
                   )}
                   <span className={`z-10 ${day.theDay ? 'font-bold' : ''} ${day.day == 'sun' ? 'text-red-400' : ''} ${day.day == 'sat' ? 'text-blue-400' : ''}`}>{day.date}</span>

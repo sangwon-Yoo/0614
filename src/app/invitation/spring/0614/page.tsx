@@ -74,7 +74,7 @@ export default function Page0614() {
           <CardGallery currentSlideIndex={currentSlideIndex} />
         </SwiperSlide>
         <SwiperSlide>
-          <CardVenue />
+          <CardVenue currentSlideIndex={currentSlideIndex} />
         </SwiperSlide>
       </Swiper>
     </>

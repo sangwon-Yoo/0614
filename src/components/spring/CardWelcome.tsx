@@ -37,10 +37,8 @@ export default function CardWelcome({currentSlideIndex}: {currentSlideIndex: num
           <Image
             src="/image/flower/rose-2.svg"
             alt={'rose1'}
-            sizes="56px"
-            width={1}
-            height={1}
-            className={'w-14 h-auto'}
+            width={56}
+            height={56}
           />
         </div>
         <motion.div
