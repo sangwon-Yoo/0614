@@ -5,7 +5,7 @@ export default function CardGuestbook({currentSlideIndex}: {currentSlideIndex: n
       <div
         className={'flex flex-col justify-center items-center flex-none h-24'}
       >
-        <span className={'font-greatVibes text-lg'}>Celebratory Contribution</span>
+        <span className={'font-greatVibes text-lg'}>Guestbook</span>
       </div>
       <div>
         <div>

@@ -9,8 +9,8 @@ import CardDate from '@/components/spring/CardDate';
 import CardWelcome from '@/components/spring/CardWelcome';
 import CardGallery from '@/components/spring/CardGallery';
 import CardVenue from '@/components/spring/CardVenue';
-import CardHelpfulDetails from '@/components/spring/CardHelpfulDetails';
-import CardCelebration from '@/components/spring/CardCelebration';
+import CardDetails from '@/components/spring/CardDetails';
+import CardBlessings from '@/components/spring/CardBlessings';
 import CardGuestbook from '@/components/spring/CardGuestbook';
 
 export default function Page0614() {
@@ -80,10 +80,10 @@ export default function Page0614() {
           <CardVenue thisCardIndex={4} currentSlideIndex={currentSlideIndex} />
         </SwiperSlide>
         <SwiperSlide>
-          <CardHelpfulDetails currentSlideIndex={currentSlideIndex} />
+          <CardDetails currentSlideIndex={currentSlideIndex} />
         </SwiperSlide>
         <SwiperSlide>
-          <CardCelebration currentSlideIndex={currentSlideIndex} />
+          <CardBlessings currentSlideIndex={currentSlideIndex} />
         </SwiperSlide>
         <SwiperSlide>
           <CardGuestbook currentSlideIndex={currentSlideIndex} />
