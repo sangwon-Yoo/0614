@@ -1,9 +1,7 @@
-import { useSwiper } from 'swiper/react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-export default function CardWelcome() {
-  const swiper = useSwiper();
+export default function CardWelcome({currentSlideIndex}: {currentSlideIndex: number}) {
 
   return (
     <div className={'relative h-full flex flex-col'}>
@@ -15,7 +13,7 @@ export default function CardWelcome() {
       <div className={'flex flex-col justify-between flex-1'}>
         <motion.div
           className={'flex-none'}
-          key={`welcome-0-${swiper.activeIndex}`}
+          key={`welcome-0-${currentSlideIndex}`}
           initial={{ y: 25, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: 'easeOut' }}
@@ -28,7 +26,7 @@ export default function CardWelcome() {
             {'서로의 반려자가 되려 합니다.'}
             <br />
           </p>
-          <p className={'whitespace-nowrap text-center leading-8 mb-6'}>
+          <p className={'whitespace-nowrap text-center leading-8'}>
             {'그 진실 서약을 하는 자리에'}
             <br />
             {'소중한 분들을 모십니다.'}
@@ -37,20 +35,15 @@ export default function CardWelcome() {
         </motion.div>
         <div className={'flex-none flex justify-center'}>
           <Image
-            src="/image/bouquet/bouquet-1.png"
-            alt={'bouquet1'}
-            sizes="(max-width: 640px) 81px"
-            width={1}
-            height={1}
-            style={{
-              width: '81px',
-              height: 'auto',
-            }}
+            src="/image/flower/rose-2.svg"
+            alt={'rose1'}
+            width={56}
+            height={56}
           />
         </div>
         <motion.div
           className={'flex-none flex flex-row justify-center'}
-          key={`welcome-1-${swiper.activeIndex}`}
+          key={`welcome-1-${currentSlideIndex}`}
           initial={{ y: 25, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
@@ -74,15 +67,15 @@ export default function CardWelcome() {
         </motion.div>
         <motion.div
           className={'flex-none'}
-          key={`welcome-2-${swiper.activeIndex}`}
+          key={`welcome-2-${currentSlideIndex}`}
           initial={{ y: 25, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
         >
-          <p className={'whitespace-nowrap text-center leading-8 mb-6'}>
+          <p className={'whitespace-nowrap text-center leading-8 mb-8'}>
             {'2025년 6월 14일 오후 2시 30분'}
             <br />
-            {'엘리에나 호텔, 3F 임페리얼 홀'}
+            {'엘리에나호텔웨딩, 3F 임페리얼 홀'}
             <br />
           </p>
         </motion.div>
