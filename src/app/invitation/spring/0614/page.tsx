@@ -9,6 +9,9 @@ import CardDate from '@/components/spring/CardDate';
 import CardWelcome from '@/components/spring/CardWelcome';
 import CardGallery from '@/components/spring/CardGallery';
 import CardVenue from '@/components/spring/CardVenue';
+import CardHelpfulDetails from '@/components/spring/CardHelpfulDetails';
+import CardCelebration from '@/components/spring/CardCelebration';
+import CardGuestbook from '@/components/spring/CardGuestbook';
 
 export default function Page0614() {
   const [transparentDim, setTransparentDim] = useState(false);
@@ -75,6 +78,15 @@ export default function Page0614() {
         </SwiperSlide>
         <SwiperSlide>
           <CardVenue thisCardIndex={4} currentSlideIndex={currentSlideIndex} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CardHelpfulDetails currentSlideIndex={currentSlideIndex} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CardCelebration currentSlideIndex={currentSlideIndex} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CardGuestbook currentSlideIndex={currentSlideIndex} />
         </SwiperSlide>
       </Swiper>
     </>

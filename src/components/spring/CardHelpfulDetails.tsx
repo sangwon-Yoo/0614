@@ -1,0 +1,17 @@
+export default function CardHelpfulDetails({currentSlideIndex}: {currentSlideIndex: number}) {
+
+  return (
+    <div className={'relative h-full flex flex-col'}>
+      <div
+        className={'flex flex-col justify-center items-center flex-none h-24'}
+      >
+        <span className={'font-greatVibes text-lg'}>Celebratory Contribution</span>
+      </div>
+      <div>
+        <div>
+
+        </div>
+      </div>
+    </div>
+  );
+}
