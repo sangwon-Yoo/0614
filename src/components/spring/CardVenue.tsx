@@ -99,7 +99,7 @@ export default function CardVenue(
           </div>
           <div className={'flex justify-between items-center flex-initial h-14 mx-3'}>
             <button
-              className={'flex justify-center items-center flex-initial h-8 w-24 ring-1 ring-black rounded-full'}
+              className={'flex justify-center items-center flex-initial h-8 w-1/3'}
               onClick={() => {}}
             >
               <Image
@@ -111,7 +111,7 @@ export default function CardVenue(
               <span className={'text-sm ml-1'}>{`네이버지도`}</span>
             </button>
             <button
-              className={'flex justify-center items-center flex-initial h-8 w-24 ring-1 ring-black rounded-full'}
+              className={'flex justify-center items-center flex-initial h-8 w-1/3 border-x border-gray-300'}
               onClick={() => isKakaoInitialized ? window.Kakao.Navi.share({
                 name: '현대백화점 판교점',
                 x: 127.11205203011632,
@@ -128,7 +128,7 @@ export default function CardVenue(
               <span className={'text-sm ml-1'}>{`카카오내비`}</span>
             </button>
             <button
-              className={'flex justify-center items-center flex-initial h-8 w-24 ring-1 ring-black rounded-full'}
+              className={'flex justify-center items-center flex-initial h-8 w-1/3'}
               onClick={() => window.open('https://apis.openapi.sk.com/tmap/app/map?appKey=6oENJwPUXl4nEgYL0Mven4E5NpRgEDCTaQGXucXC&name=엘리에나호텔웨딩&lon=127.03168441&lat=37.51121158', '_blank')}
             >
               <Image
