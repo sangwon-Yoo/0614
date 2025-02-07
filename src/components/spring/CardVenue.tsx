@@ -88,7 +88,7 @@ export default function CardVenue(
         </div>
 
         <div className={'flex flex-col flex-1 my-8'}>
-          <div className={'relative flex-1 h-[270px] mx-6 mb-2'}>
+          <div className={'relative flex-1 h-[270px] mx-3 mb-2'}>
             <Image
               fill={true}
               src="/image/venue/map-1.png"
@@ -97,7 +97,7 @@ export default function CardVenue(
               className={'object-cover rounded-md border border-gray-300'}
             />
           </div>
-          <div className={'flex justify-between items-center flex-initial h-14 mx-6'}>
+          <div className={'flex justify-between items-center flex-initial h-14 mx-3'}>
             <button
               className={'flex justify-center items-center flex-initial h-8 w-24 ring-1 ring-black rounded-full'}
               onClick={() => {}}
