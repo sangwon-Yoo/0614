@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import 'swiper/css';
 import { SwiperContainer } from 'swiper/element';
 import { motion } from 'framer-motion';
+import photo_1 from '../../../public/gallery/cards/photo-1.jpeg'
 
 export default function CardGallery({currentSlideIndex}: {currentSlideIndex: number}) {
 
@@ -142,7 +143,7 @@ function GalleryPop({initIndex, onClose}: {
       className={`fixed z-50 inset-0 transition-opacity ease-linear duration-200 bg-black ${isTransparentModal ? 'opacity-0' : 'opacity-100'}`}
     >
       <div className={'flex flex-col h-full'}>
-        <div className={'flex justify-between flex-initial h-[10%]'}>
+        <div className={'flex justify-between flex-initial h-[8%]'}>
           <div className={'flex justify-center items-center flex-initial w-24'}>
             <span className={'text-white'}>{`${swiperIndex + 1} / ${photoList.length}`}</span>
           </div>
@@ -155,7 +156,7 @@ function GalleryPop({initIndex, onClose}: {
             </button>
           </div>
         </div>
-        <div className={'flex-initial h-[75%]'}>
+        <div className={'flex-initial h-[80%]'}>
           <SwiperGalleryCards
             photoList={photoList}
             initIndex={initIndex}
@@ -163,7 +164,7 @@ function GalleryPop({initIndex, onClose}: {
             setSwiperIndex={setSwiperIndex}
           />
         </div>
-        <div className={'flex-initial h-[15%] px-2 py-2'}>
+        <div className={'flex-initial h-[12%] px-2 py-2'}>
           <SwiperGalleryThumb
             photoList={photoList}
             initIndex={initIndex}
@@ -226,7 +227,7 @@ function SwiperGalleryThumb({photoList, initIndex, setSwiper, swiperIndex, setSw
   const swiperSlideList = photoList.map((photo, index) => {
 
     return (
-      <SwiperSlide key={index} className={'!w-14'}>
+      <SwiperSlide key={index} className={'!w-11'}>
         <SwiperSlideThumbContents src={photo} swiperIndex={swiperIndex} index={index} />
       </SwiperSlide>
     );
@@ -257,13 +258,13 @@ function SwiperSlideThumbContents({src, swiperIndex, index}: {
 }) {
 
   return (
-    <div className={`relative h-full bg-white ${swiperIndex == index ? 'border-2 rounded-sm border-amber-100' : ''}`}>
+    <div className={`flex flex-col justify-center items-center relative h-full`}>
       <Image
-        fill={true}
         src={src}
-        sizes="56px"
+        width={44}
+        height={66}
         alt={`갤리리 썸네일 ${index}`}
-        className={'object-contain'}
+        className={`rounded-[4px] ${swiperIndex == index ? 'border-2 border-amber-100' : 'border-2 border-transparent'}`}
       />
     </div>
   );
