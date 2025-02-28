@@ -5,11 +5,10 @@ import { KAKAO_APP_KEY } from '@/const/global';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 export default function CardVenue(
-  {thisCardIndex, currentSlideIndex}: {thisCardIndex: number, currentSlideIndex: number}
+  {currentSlideIndex}: {currentSlideIndex: number}
 ) {
 
   const [isKakaoInitialized, setKakaoInitialized] = useState<boolean>(false);
-  const [isCopyToClipBoard, setIsCopyToClipBoard] = useState<boolean>(false);
 
   useEffect(() => {
 
@@ -22,12 +21,6 @@ export default function CardVenue(
 
 
   }, [currentSlideIndex]);
-
-  useEffect(() => {
-    if(thisCardIndex == currentSlideIndex) {
-      setIsCopyToClipBoard(false);//슬라이드 진입시 클립보드 초기화
-    }
-  }, [currentSlideIndex, thisCardIndex]);
 
   return (
     <div className={'relative h-full flex flex-col'}>
@@ -53,24 +46,12 @@ export default function CardVenue(
           </motion.p>
 
           <div className={'flex justify-center items-center my-4'}>
-            <CopyToClipboard text={'서울 강남구 논현로 645'} onCopy={() => setIsCopyToClipBoard(true)}>
-              {isCopyToClipBoard ? (
-                <motion.button
-                  className={'h-8 bg-red-100 rounded-full mx-2 px-3'}
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ duration: 0.2, ease: 'easeOut' }}
-                >
-                  {`복사되었습니다.`}
-                </motion.button>
-              ) : (
-                <button
-                  className={'h-8 bg-red-100 rounded-full mx-2 px-3'}
-                >
-                  {`주소 복사`}
-                </button>
-              )}
-
+            <CopyToClipboard text={'서울 강남구 논현로 645'} onCopy={() => null}>
+              <button
+                className={'h-8 bg-red-200 rounded-lg mx-2 px-3'}
+              >
+                {`주소복사`}
+              </button>
             </CopyToClipboard>
             <a
               className={'mx-2'}

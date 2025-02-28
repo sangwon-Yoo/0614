@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function CardDetails({currentSlideIndex}: {currentSlideIndex: number}) {
 
@@ -27,8 +28,8 @@ export default function CardDetails({currentSlideIndex}: {currentSlideIndex: num
             {`안내사항을 말씀드립니다.`}
           </motion.p>
         </div>
-        <div className={'flex flex-col flex-initial h-5/6'}>
-          <div className={'flex justify-around mb-10'}>
+        <div className={'flex flex-col justify-between flex-initial h-5/6'}>
+          <div className={'flex justify-around'}>
             <button
               className={`flex justify-center items-center h-14 w-16 ${activeTab == '예식' ? 'font-bold border-b-2 border-red-100' : ''}`}
               onClick={() => setActiveTab('예식')}
@@ -49,7 +50,7 @@ export default function CardDetails({currentSlideIndex}: {currentSlideIndex: num
             </button>
           </div>
 
-          <div className={'flex flex-col justify-center items-center flex-initial py-5'}>
+          <div className={'flex flex-col justify-center items-center flex-initial'}>
             <motion.p
               className={'whitespace-nowrap text-center leading-8'}
               key={`detail-1-${currentSlideIndex}-${activeTab}`}
@@ -102,6 +103,15 @@ export default function CardDetails({currentSlideIndex}: {currentSlideIndex: num
                 </>
               )}
             </motion.p>
+          </div>
+
+          <div className={'flex-none flex justify-center mb-8'}>
+            <Image
+              src="/image/flower/rose-2.svg"
+              alt={'rose1'}
+              width={56}
+              height={56}
+            />
           </div>
 
         </div>

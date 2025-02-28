@@ -77,16 +77,13 @@ export default function Page0614() {
           <CardGallery currentSlideIndex={currentSlideIndex} />
         </SwiperSlide>
         <SwiperSlide>
-          <CardVenue thisCardIndex={4} currentSlideIndex={currentSlideIndex} />
+          <CardVenue currentSlideIndex={currentSlideIndex} />
         </SwiperSlide>
         <SwiperSlide>
           <CardDetails currentSlideIndex={currentSlideIndex} />
         </SwiperSlide>
         <SwiperSlide>
           <CardBlessings currentSlideIndex={currentSlideIndex} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardGuestbook currentSlideIndex={currentSlideIndex} />
         </SwiperSlide>
       </Swiper>
     </>
