@@ -31,22 +31,25 @@ export default function CardDetails({currentSlideIndex}: {currentSlideIndex: num
         <div className={'flex flex-col justify-between flex-initial h-5/6'}>
           <div className={'flex justify-around'}>
             <button
-              className={`flex justify-center items-center h-14 w-16 ${activeTab == '예식' ? 'font-bold border-b-2 border-red-100' : ''}`}
+              className={`relative flex justify-center items-center h-14 w-16`}
               onClick={() => setActiveTab('예식')}
             >
               예식
+              <div className={`absolute bottom-0 w-full border-[1.5px] ${activeTab == '예식' ? 'border-red-200' : 'border-none'} rounded-full`}></div>
             </button>
             <button
-              className={`flex justify-center items-center h-14 w-32 ${activeTab == '식사' ? 'font-bold border-b-2 border-red-100' : ''}`}
+              className={`relative flex justify-center items-center h-14 w-32`}
               onClick={() => setActiveTab('식사')}
             >
               식사 및 답례품
+              <div className={`absolute bottom-0 w-full border-[1.5px] ${activeTab == '식사' ? 'border-red-200' : 'border-none'} rounded-full`}></div>
             </button>
             <button
-              className={`flex justify-center items-center h-14 w-16 ${activeTab == '주차' ? 'font-bold border-b-2 border-red-100' : ''}`}
+              className={`relative flex justify-center items-center h-14 w-16`}
               onClick={() => setActiveTab('주차')}
             >
               주차
+              <div className={`absolute bottom-0 w-full border-[1.5px] ${activeTab == '주차' ? 'border-red-200' : 'border-none'} rounded-full`}></div>
             </button>
           </div>
 
