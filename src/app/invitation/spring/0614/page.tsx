@@ -11,7 +11,8 @@ import CardGallery from '@/components/spring/CardGallery';
 import CardVenue from '@/components/spring/CardVenue';
 import CardDetails from '@/components/spring/CardDetails';
 import CardBlessings from '@/components/spring/CardBlessings';
-import CardGuestbook from '@/components/spring/CardGuestbook';
+import CardEnding from '@/components/spring/CardEnding';
+import { KAKAO_APP_KEY } from '@/const/global';
 
 export default function Page0614() {
   const [transparentDim, setTransparentDim] = useState(false);
@@ -20,6 +21,20 @@ export default function Page0614() {
   const [allowSlideNext, setAllowSlideNext] = useState(true);
 
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+
+  const [isKakaoInitialized, setKakaoInitialized] = useState<boolean>(false);
+
+  useEffect(() => {
+
+    //카카오 SDK 초기화
+    if(window.Kakao && !window.Kakao.isInitialized()) {
+      window.Kakao.init(KAKAO_APP_KEY);
+      setKakaoInitialized(true);
+      console.log('kakao has initialized!');
+    }
+
+
+  }, [currentSlideIndex]);
 
   useEffect(() => {
     setTransparentDim(true);
@@ -41,7 +56,7 @@ export default function Page0614() {
    * tailwind flex 정리(자식속성)
    * flex-none : 유연하지 않다 > 그냥 block, 자체 크기를 가져야함.
    * flex-1 : 항상 유연함 >> 부모 끝까지 늘어나거나, 공간이 부족하면 줄어들기도 한다. > 자체 크기를 안가지도록 한다.
-   * flex-initial : 초기 크기를 유지한다.(자체크기를 가진다) 늘어나지 않는다. 단, 공간이 부족해지면 줄어든다!
+   * flex-initial : 초기 크기를 유지한다.(자체크기를 가진다) 늘어나지 않는다. 단, 공간이 부족해지면 줄어든다! (default)
    * flex-auto : 초기 크기가 유연하게 변한다.(자체크기를 가진다) 늘어나고 줄어들고가 가능하다.
    */
 
@@ -77,7 +92,7 @@ export default function Page0614() {
           <CardGallery currentSlideIndex={currentSlideIndex} />
         </SwiperSlide>
         <SwiperSlide>
-          <CardVenue thisCardIndex={4} currentSlideIndex={currentSlideIndex} />
+          <CardVenue currentSlideIndex={currentSlideIndex} isKakaoInitialized={isKakaoInitialized} />
         </SwiperSlide>
         <SwiperSlide>
           <CardDetails currentSlideIndex={currentSlideIndex} />
@@ -86,7 +101,7 @@ export default function Page0614() {
           <CardBlessings currentSlideIndex={currentSlideIndex} />
         </SwiperSlide>
         <SwiperSlide>
-          <CardGuestbook currentSlideIndex={currentSlideIndex} />
+          <CardEnding currentSlideIndex={currentSlideIndex} isKakaoInitialized={isKakaoInitialized} />
         </SwiperSlide>
       </Swiper>
     </>

@@ -33,7 +33,7 @@ export default function CardDate({currentSlideIndex}: {currentSlideIndex: number
         </div>
 
         <div className={'flex-initial h-3/6'}>
-          <div className={'grid grid-cols-7 mx-6 text-sm auto-rows-auto'}>
+          <div className={'grid grid-cols-7 mx-3 text-sm auto-rows-auto'}>
             {monthDays.map((day, index) => {
 
               return (
