@@ -1,26 +1,10 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
-import { KAKAO_APP_KEY } from '@/const/global';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 export default function CardVenue(
-  {currentSlideIndex}: {currentSlideIndex: number}
+  {currentSlideIndex, isKakaoInitialized}: {currentSlideIndex: number, isKakaoInitialized: boolean}
 ) {
-
-  const [isKakaoInitialized, setKakaoInitialized] = useState<boolean>(false);
-
-  useEffect(() => {
-
-    //카카오 SDK 초기화
-    if(window.Kakao && !window.Kakao.isInitialized()) {
-      window.Kakao.init(KAKAO_APP_KEY);
-      setKakaoInitialized(true);
-      console.log('kakao has initialized!');
-    }
-
-
-  }, [currentSlideIndex]);
 
   return (
     <div className={'relative h-full flex flex-col'}>
@@ -93,12 +77,12 @@ export default function CardVenue(
             </button>
             <button
               className={'flex justify-center items-center flex-initial h-8 w-1/3 border-x border-gray-300'}
-              onClick={() => isKakaoInitialized ? window.Kakao.Navi.share({
+              onClick={() => isKakaoInitialized && window.Kakao.Navi.share({
                 name: '현대백화점 판교점',
                 x: 127.11205203011632,
                 y: 37.39279717586919,
                 coordType: 'wgs84',
-              }) : null}
+              })}
             >
               <Image
                 src="/image/logos/kakaoMap.png"

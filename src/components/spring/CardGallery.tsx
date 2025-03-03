@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import 'swiper/css';
 import { SwiperContainer } from 'swiper/element';
 import { motion } from 'framer-motion';
-import photo_1 from '../../../public/gallery/cards/photo-1.jpeg'
 
 export default function CardGallery({currentSlideIndex}: {currentSlideIndex: number}) {
 

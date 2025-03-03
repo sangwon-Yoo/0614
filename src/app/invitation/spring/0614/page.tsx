@@ -11,7 +11,8 @@ import CardGallery from '@/components/spring/CardGallery';
 import CardVenue from '@/components/spring/CardVenue';
 import CardDetails from '@/components/spring/CardDetails';
 import CardBlessings from '@/components/spring/CardBlessings';
-import CardGuestbook from '@/components/spring/CardGuestbook';
+import CardEnding from '@/components/spring/CardEnding';
+import { KAKAO_APP_KEY } from '@/const/global';
 
 export default function Page0614() {
   const [transparentDim, setTransparentDim] = useState(false);
@@ -20,6 +21,20 @@ export default function Page0614() {
   const [allowSlideNext, setAllowSlideNext] = useState(true);
 
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+
+  const [isKakaoInitialized, setKakaoInitialized] = useState<boolean>(false);
+
+  useEffect(() => {
+
+    //카카오 SDK 초기화
+    if(window.Kakao && !window.Kakao.isInitialized()) {
+      window.Kakao.init(KAKAO_APP_KEY);
+      setKakaoInitialized(true);
+      console.log('kakao has initialized!');
+    }
+
+
+  }, [currentSlideIndex]);
 
   useEffect(() => {
     setTransparentDim(true);
@@ -77,13 +92,16 @@ export default function Page0614() {
           <CardGallery currentSlideIndex={currentSlideIndex} />
         </SwiperSlide>
         <SwiperSlide>
-          <CardVenue currentSlideIndex={currentSlideIndex} />
+          <CardVenue currentSlideIndex={currentSlideIndex} isKakaoInitialized={isKakaoInitialized} />
         </SwiperSlide>
         <SwiperSlide>
           <CardDetails currentSlideIndex={currentSlideIndex} />
         </SwiperSlide>
         <SwiperSlide>
           <CardBlessings currentSlideIndex={currentSlideIndex} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CardEnding currentSlideIndex={currentSlideIndex} isKakaoInitialized={isKakaoInitialized} />
         </SwiperSlide>
       </Swiper>
     </>
