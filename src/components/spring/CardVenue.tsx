@@ -32,7 +32,7 @@ export default function CardVenue(
           <div className={'flex justify-center items-center my-4'}>
             <CopyToClipboard text={'서울 강남구 논현로 645'} onCopy={() => null}>
               <button
-                className={'h-8 bg-red-200 rounded-lg mx-2 px-3'}
+                className={'h-5 bg-red-200 rounded-lg mx-2 px-3 text-xs'}
               >
                 {`주소복사`}
               </button>
@@ -44,8 +44,8 @@ export default function CardVenue(
               <Image
                 src="/image/icons/phone-1.svg"
                 alt={'phone1'}
-                width={16}
-                height={16}
+                width={14}
+                height={14}
               />
             </a>
           </div>
