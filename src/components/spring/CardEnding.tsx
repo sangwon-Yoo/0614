@@ -46,8 +46,8 @@ export default function CardEnding({currentSlideIndex, isKakaoInitialized}: {cur
           <p className={'w-48 leading-7 text-center mb-8'}>
             {'공유하기'}
           </p>
-          <div className={'flex w-48 justify-between'}>
-            <div id={'kakaotalk-sharing-btn'} ref={ref => {
+          <div className={'flex w-24 justify-between'}>
+            <div ref={ref => {
               if(ref && isKakaoInitialized && !isKakaoShareButtonInitialized) {
                 setIsKakaoShareButtonInitialized(true);
                 console.log('sdf');
@@ -56,20 +56,33 @@ export default function CardEnding({currentSlideIndex, isKakaoInitialized}: {cur
                   objectType : 'feed',
                   content : {
                     title : '현정 ♥ 상원',
-                    imageUrl : 'https://localhost:3000/gallery/main.jpg',
-                    link : 'http://localhost:3000/invitation/spring/0614'
+                    imageUrl : 'https://0614-theta.vercel.app/image-og.png',
+                    link : {
+                      webUrl : 'https://0614-theta.vercel.app/invitation/spring/0614',
+                      mobileWebUrl : 'https://0614-theta.vercel.app/invitation/spring/0614'
+                    }
                   }
                 });
               }
             }}>
-              카카오톡
+              <Image
+                src="/image/logos/kakaoTalk.png"
+                alt={'kakoTalk'}
+                width={36}
+                height={36}
+              />
             </div>
-            <div>
-              네이버 밴드
-              {/*<script type="text/javascript" src="//developers.band.us/js/share/band-button.js?v=03032025"></script>
-              <script type="text/javascript">
-                new ShareBand.makeButton({"lang":"en-US","type":"c"});
-              </script>*/}
+            <div
+              onClick={() => window.open(`https://band.us/plugin/share?body=${encodeURIComponent(
+                '우리 결혼해요!\n현정 ♥ 상원\n모바일 청첩장 링크 : https://0614-theta.vercel.app/invitation/spring/0614'
+              )}&route=0614-theta.vercel.app`, "_blank")}
+            >
+              <Image
+                src="/image/logos/naverBand.png"
+                alt={'naverBand'}
+                width={36}
+                height={36}
+              />
             </div>
           </div>
         </div>
