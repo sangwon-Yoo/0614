@@ -50,7 +50,6 @@ export default function CardEnding({currentSlideIndex, isKakaoInitialized}: {cur
             <div ref={ref => {
               if(ref && isKakaoInitialized && !isKakaoShareButtonInitialized) {
                 setIsKakaoShareButtonInitialized(true);
-                console.log('sdf');
                 window.Kakao.Share.createDefaultButton({
                   container: ref,
                   objectType : 'feed',

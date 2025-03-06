@@ -98,7 +98,7 @@ export default function Page0614() {
           <CardDetails currentSlideIndex={currentSlideIndex} />
         </SwiperSlide>
         <SwiperSlide>
-          <CardBlessings currentSlideIndex={currentSlideIndex} />
+          <CardBlessings currentSlideIndex={currentSlideIndex} selfSlideIndex={7} />
         </SwiperSlide>
         <SwiperSlide>
           <CardEnding currentSlideIndex={currentSlideIndex} isKakaoInitialized={isKakaoInitialized} />

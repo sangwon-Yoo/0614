@@ -44,7 +44,7 @@ export default function CardGallery({currentSlideIndex}: {currentSlideIndex: num
             사진을 눌러 보세요.
           </motion.p>
         </div>
-        <div className={'grid grid-rows-4 grid-cols-2 grid-flow-col gap-3 flex-1 mx-3 my-8'}>
+        <div className={'grid grid-rows-4 grid-cols-2 grid-flow-col gap-3 flex-1 ml-3 mt-5 mb-8'}>
           <button onClick={() => openGallerySwiper(0)} className={'relative'}>
             <Image
               fill={true}
