@@ -44,8 +44,10 @@ export default function CardGallery({currentSlideIndex}: {currentSlideIndex: num
             사진을 눌러 보세요.
           </motion.p>
         </div>
-        <div className={'grid grid-rows-4 grid-cols-2 grid-flow-col gap-3 flex-1 mx-3 my-8'}>
-          <button onClick={() => openGallerySwiper(0)} className={'relative'}>
+        <div
+          className={'grid grid-rows-4 grid-flow-col auto-cols-min gap-3 flex-1 ml-3 mt-5 mb-8 overflow-auto after:fixed after:left-3/4 after:h-full after:w-1/4 after:bg-gradient-to-r after:from-transparent after:to-slate-100'}
+        >
+          <button onClick={() => openGallerySwiper(0)} className={'relative w-[150px]'}>
             <Image
               fill={true}
               src="/gallery/cards/photo-1.jpeg"
@@ -54,7 +56,7 @@ export default function CardGallery({currentSlideIndex}: {currentSlideIndex: num
               className={'object-cover rounded-md'}
             />
           </button>
-          <button onClick={() => openGallerySwiper(1)} className={'relative row-span-2'}>
+          <button onClick={() => openGallerySwiper(1)} className={'relative row-span-2 w-[150px]'}>
             <Image
               fill={true}
               src="/gallery/cards/photo-2.jpeg"
@@ -63,7 +65,7 @@ export default function CardGallery({currentSlideIndex}: {currentSlideIndex: num
               className={'object-cover rounded-md'}
             />
           </button>
-          <button onClick={() => openGallerySwiper(2)} className={'relative'}>
+          <button onClick={() => openGallerySwiper(2)} className={'relative w-[150px]'}>
             <Image
               fill={true}
               src="/gallery/cards/photo-3.jpeg"
@@ -72,7 +74,7 @@ export default function CardGallery({currentSlideIndex}: {currentSlideIndex: num
               className={'object-cover rounded-md'}
             />
           </button>
-          <button onClick={() => openGallerySwiper(3)} className={'relative row-span-2'}>
+          <button onClick={() => openGallerySwiper(3)} className={'relative row-span-2 w-[150px]'}>
             <Image
               fill={true}
               src="/gallery/cards/photo-4.jpeg"
@@ -81,7 +83,52 @@ export default function CardGallery({currentSlideIndex}: {currentSlideIndex: num
               className={'object-cover rounded-md'}
             />
           </button>
-          <button onClick={() => openGallerySwiper(4)} className={'relative row-span-2'}>
+          <button onClick={() => openGallerySwiper(4)} className={'relative row-span-2 w-[150px]'}>
+            <Image
+              fill={true}
+              src="/gallery/cards/photo-5.jpeg"
+              sizes="(max-width: 640px) 100vw, 640px"
+              alt={'메인 사진'}
+              className={'object-cover rounded-md'}
+            />
+          </button>
+          <button onClick={() => openGallerySwiper(5)} className={'relative w-[150px]'}>
+            <Image
+              fill={true}
+              src="/gallery/cards/photo-1.jpeg"
+              sizes="(max-width: 640px) 100vw, 640px"
+              alt={'메인 사진'}
+              className={'object-cover rounded-md'}
+            />
+          </button>
+          <button onClick={() => openGallerySwiper(6)} className={'relative row-span-2 w-[150px]'}>
+            <Image
+              fill={true}
+              src="/gallery/cards/photo-2.jpeg"
+              sizes="(max-width: 640px) 100vw, 640px"
+              alt={'메인 사진'}
+              className={'object-cover rounded-md'}
+            />
+          </button>
+          <button onClick={() => openGallerySwiper(7)} className={'relative w-[150px]'}>
+            <Image
+              fill={true}
+              src="/gallery/cards/photo-3.jpeg"
+              sizes="(max-width: 640px) 100vw, 640px"
+              alt={'메인 사진'}
+              className={'object-cover rounded-md'}
+            />
+          </button>
+          <button onClick={() => openGallerySwiper(8)} className={'relative row-span-2 w-[150px]'}>
+            <Image
+              fill={true}
+              src="/gallery/cards/photo-4.jpeg"
+              sizes="(max-width: 640px) 100vw, 640px"
+              alt={'메인 사진'}
+              className={'object-cover rounded-md'}
+            />
+          </button>
+          <button onClick={() => openGallerySwiper(9)} className={'relative row-span-2 w-[150px]'}>
             <Image
               fill={true}
               src="/gallery/cards/photo-5.jpeg"
@@ -91,6 +138,7 @@ export default function CardGallery({currentSlideIndex}: {currentSlideIndex: num
             />
           </button>
         </div>
+
       </div>
 
       {isPopGallery && <GalleryPop initIndex={initGallerySwiperIndex} onClose={() => setIsPopGallery(false)} />}

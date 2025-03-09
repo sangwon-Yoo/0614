@@ -52,11 +52,11 @@ export default function CardVenue(
 
         </div>
 
-        <div className={'flex flex-col flex-1 my-8'}>
-          <div className={'relative flex-1 h-[270px] mx-3 mb-2'}>
+        <div className={'flex flex-col justify-evenly flex-1 my-8'}>
+          <div className={'relative h-[80%] mx-3 mb-2 bg-white'}>
             <Image
               fill={true}
-              src="/image/venue/map-1.png"
+              src="/image/venue/map-1.svg"
               sizes="(max-width: 640px) 640px, 640px"
               alt={'지도-1'}
               className={'object-cover rounded-md border border-gray-300'}
@@ -65,7 +65,7 @@ export default function CardVenue(
           <div className={'flex justify-between items-center flex-initial h-14 mx-3'}>
             <button
               className={'flex justify-center items-center flex-initial h-8 w-1/3'}
-              onClick={() => {}}
+              onClick={() => window.open('https://naver.me/xRhOLU3g', '_blank')}
             >
               <Image
                 src="/image/logos/naverMap.png"
@@ -78,9 +78,9 @@ export default function CardVenue(
             <button
               className={'flex justify-center items-center flex-initial h-8 w-1/3 border-x border-gray-300'}
               onClick={() => isKakaoInitialized && window.Kakao.Navi.share({
-                name: '현대백화점 판교점',
-                x: 127.11205203011632,
-                y: 37.39279717586919,
+                name: '엘리에나호텔 웨딩',
+                x: 127.03128242092592,
+                y: 37.51116721043193,
                 coordType: 'wgs84',
               })}
             >

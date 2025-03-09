@@ -42,15 +42,14 @@ export default function CardEnding({currentSlideIndex, isKakaoInitialized}: {cur
           />
         </div>
 
-        <div className={'flex flex-col justify-center items-center h-20 mb-24'}>
-          <p className={'w-48 leading-7 text-center mb-8'}>
+        <div className={'flex flex-col justify-center items-center h-20 mb-20'}>
+          <p className={'w-48 leading-7 text-center mb-4'}>
             {'공유하기'}
           </p>
           <div className={'flex w-24 justify-between'}>
             <div ref={ref => {
               if(ref && isKakaoInitialized && !isKakaoShareButtonInitialized) {
                 setIsKakaoShareButtonInitialized(true);
-                console.log('sdf');
                 window.Kakao.Share.createDefaultButton({
                   container: ref,
                   objectType : 'feed',
