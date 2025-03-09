@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { DDayInfo } from '@/components/spring/server/initServerData';
 
-export default function CardDate({currentSlideIndex}: {currentSlideIndex: number}) {
+export default function CardDate({currentSlideIndex, dDayInfo}: {currentSlideIndex: number, dDayInfo: DDayInfo}) {
 
   const monthDays: Array<{ date: number, day: 'sun' | 'sat' | 'weekdays', theDay?: boolean}> = [
     { date : 1, day : 'sun'}, { date : 2, day : 'weekdays'}, { date : 3, day : 'weekdays'}, { date : 4, day : 'weekdays'}, { date : 5, day : 'weekdays'}, { date : 6, day : 'weekdays'}, { date : 7, day : 'sat'},
@@ -68,8 +69,8 @@ export default function CardDate({currentSlideIndex}: {currentSlideIndex: number
             <span className={'font-greatVibes mt-6 text-3xl'}>
               {`D`}
             </span>
-            <span className={'mt-6 text-xl'}>
-              {` - 78`}
+            <span className={'mt-6 text-2xl'}>
+              {` - ${dDayInfo.dDay}`}
             </span>
           </motion.div>
         </div>
