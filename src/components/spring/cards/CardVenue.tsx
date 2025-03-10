@@ -52,14 +52,14 @@ export default function CardVenue(
 
         </div>
 
-        <div className={'flex flex-col justify-evenly flex-1 my-8'}>
-          <div className={'relative h-[80%] mx-3 mb-2 bg-white'}>
+        <div className={'flex flex-col justify-around flex-1 mb-8'}>
+          <div className={'relative h-[70%] mx-3 mb-2 bg-white'}>
             <Image
               fill={true}
-              src="/image/venue/map-1.svg"
+              src="/image/venue/map-3.svg"
               sizes="(max-width: 640px) 640px, 640px"
               alt={'지도-1'}
-              className={'object-cover rounded-md border border-gray-300'}
+              className={'object-contain rounded-md border border-gray-300'}
             />
           </div>
           <div className={'flex justify-between items-center flex-initial h-14 mx-3'}>

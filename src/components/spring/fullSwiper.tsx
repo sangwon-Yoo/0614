@@ -87,10 +87,10 @@ export default function FullSwiper({dDayInfo}: {dDayInfo: DDayInfo}) {
           <CardWelcome currentSlideIndex={currentSlideIndex} />
         </SwiperSlide>
         <SwiperSlide>
-          <CardDate currentSlideIndex={currentSlideIndex} dDayInfo={dDayInfo} />
+          <CardGallery currentSlideIndex={currentSlideIndex} />
         </SwiperSlide>
         <SwiperSlide>
-          <CardGallery currentSlideIndex={currentSlideIndex} />
+          <CardDate currentSlideIndex={currentSlideIndex} dDayInfo={dDayInfo} />
         </SwiperSlide>
         <SwiperSlide>
           <CardVenue currentSlideIndex={currentSlideIndex} isKakaoInitialized={isKakaoInitialized} />
