@@ -14,6 +14,7 @@ import CardBlessings from '@/components/spring/cards/CardBlessings';
 import CardEnding from '@/components/spring/cards/CardEnding';
 import { KAKAO_APP_KEY } from '@/const/global';
 import { DDayInfo } from '@/components/spring/server/initServerData';
+import CheckJoin from '@/components/spring/modal/CheckJoin';
 
 export default function FullSwiper({dDayInfo}: {dDayInfo: DDayInfo}) {
   const [transparentDim, setTransparentDim] = useState(false);
@@ -67,6 +68,7 @@ export default function FullSwiper({dDayInfo}: {dDayInfo: DDayInfo}) {
         className={`${displayDim ? 'block' : 'hidden'} fixed z-50 inset-0 transition-opacity ease-linear delay-1000 duration-1000 bg-white ${transparentDim ? 'opacity-0' : ''}`}
         aria-hidden={true}
       />
+      <CheckJoin currentSlideIndex={currentSlideIndex} />
       <Swiper
         allowSlidePrev={allowSlidePrev}
         allowSlideNext={allowSlideNext}
