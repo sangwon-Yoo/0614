@@ -45,7 +45,7 @@ export default function CardGallery({currentSlideIndex}: {currentSlideIndex: num
           </motion.p>
         </div>
         <div
-          className={'grid grid-rows-4 grid-flow-col auto-cols-min gap-3 flex-1 ml-3 mt-5 mb-8 overflow-auto after:fixed after:left-3/4 after:h-full after:w-1/4 after:bg-gradient-to-r after:from-transparent after:to-slate-100'}
+          className={'grid grid-rows-4 grid-flow-col auto-cols-min gap-3 flex-1 ml-3 mt-5 mb-8 overflow-auto after:fixed after:left-3/4 after:h-full after:w-1/4 after:bg-gradient-to-r after:from-transparent after:to-slate-100 after:pointer-events-none'}
         >
           <button onClick={() => openGallerySwiper(0)} className={'relative w-[150px]'}>
             <Image

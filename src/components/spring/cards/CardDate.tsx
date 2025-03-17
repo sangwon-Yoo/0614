@@ -1,8 +1,13 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { DDayInfo } from '@/components/spring/server/initServerData';
+import { useEffect } from 'react';
 
 export default function CardDate({currentSlideIndex, dDayInfo}: {currentSlideIndex: number, dDayInfo: DDayInfo}) {
+
+  useEffect(() => {
+    console.log(dDayInfo.remains)
+  }, []);
 
   const monthDays: Array<{ date: number, day: 'sun' | 'sat' | 'weekdays', theDay?: boolean}> = [
     { date : 1, day : 'sun'}, { date : 2, day : 'weekdays'}, { date : 3, day : 'weekdays'}, { date : 4, day : 'weekdays'}, { date : 5, day : 'weekdays'}, { date : 6, day : 'weekdays'}, { date : 7, day : 'sat'},
