@@ -12,7 +12,7 @@ import CardVenue from '@/components/spring/cards/CardVenue';
 import CardDetails from '@/components/spring/cards/CardDetails';
 import CardBlessings from '@/components/spring/cards/CardBlessings';
 import CardEnding from '@/components/spring/cards/CardEnding';
-import { KAKAO_APP_KEY } from '@/const/global';
+import { KAKAO_APP_KEY } from '@/consts/global';
 import { DDayInfo } from '@/components/spring/server/initServerData';
 import CheckJoin from '@/components/spring/modal/CheckJoin';
 
