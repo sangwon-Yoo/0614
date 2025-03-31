@@ -24,16 +24,6 @@ export default function CardMain() {
       <div
         className={'absolute flex justify-center items-center w-full top-0'}
       >
-        {/*<ReactTyped
-          className={
-            'text-center font-greatVibes drop-shadow-md text-white text-4xl'
-          }
-          strings={[`We're getting married.`]}
-          typeSpeed={25}
-          contentType={'html'}
-          startDelay={1500}
-          showCursor={false}
-        />*/}
         <DelayedLottie delay={1500} lottieProps={{ animationData : mainTextAnimation, loop : false }} />
       </div>
 
