@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { ReactTyped } from 'react-typed';
 import mainTextAnimation from '@/assets/lottie/mainTextAnimation.json';
 import { DelayedLottie } from '@/components/atoms/DelayedLottie';
 
