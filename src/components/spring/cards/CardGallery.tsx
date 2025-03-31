@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Dispatch, SetStateAction, useCallback, useEffect, useState } from 'react';
+import { Dispatch, SetStateAction, useCallback, useEffect, useMemo, useState } from 'react';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import 'swiper/css';
 import { SwiperContainer } from 'swiper/element';
@@ -24,6 +24,39 @@ export default function CardGallery({currentSlideIndex}: {currentSlideIndex: num
     }
   }, [isPopGallery, swiper]);
 
+  const photoList = useMemo(() => [
+    '/gallery/cards/photo-1.jpeg',
+    '/gallery/cards/photo-2.jpeg',
+    '/gallery/cards/photo-3.jpeg',
+    '/gallery/cards/photo-4.jpeg',
+    '/gallery/cards/photo-5.jpeg',
+    '/gallery/cards/photo-6.jpeg',
+    '/gallery/cards/photo-7.jpeg',
+    '/gallery/cards/photo-8.jpeg',
+    '/gallery/cards/photo-9.jpeg',
+    '/gallery/cards/photo-10.jpeg',
+    '/gallery/cards/photo-11.jpeg',
+    '/gallery/cards/photo-12.jpeg',
+    '/gallery/cards/photo-13.jpeg',
+    '/gallery/cards/photo-14.jpeg',
+    '/gallery/cards/photo-15.jpeg',
+    '/gallery/cards/photo-16.jpeg',
+    '/gallery/cards/photo-17.jpeg',
+    '/gallery/cards/photo-18.jpeg',
+    '/gallery/cards/photo-19.jpeg',
+    '/gallery/cards/photo-20.jpeg',
+    '/gallery/cards/photo-21.jpeg',
+    '/gallery/cards/photo-22.jpeg',
+    '/gallery/cards/photo-23.jpeg',
+    '/gallery/cards/photo-24.jpeg',
+    '/gallery/cards/photo-25.jpeg',
+    '/gallery/cards/photo-26.jpeg',
+    '/gallery/cards/photo-27.jpeg',
+    '/gallery/cards/photo-28.jpeg',
+    '/gallery/cards/photo-29.jpeg',
+    '/gallery/cards/photo-30.jpeg',
+  ], []) ;
+
 
   return (
     <div className={'relative h-full flex flex-col'}>
@@ -47,108 +80,30 @@ export default function CardGallery({currentSlideIndex}: {currentSlideIndex: num
         <div
           className={'grid grid-rows-4 grid-flow-col auto-cols-min gap-3 flex-1 ml-3 mt-5 mb-8 overflow-auto after:fixed after:left-3/4 after:h-full after:w-1/4 after:bg-gradient-to-r after:from-transparent after:to-slate-100 after:pointer-events-none'}
         >
-          <button onClick={() => openGallerySwiper(0)} className={'relative w-[150px]'}>
-            <Image
-              fill={true}
-              src="/gallery/cards/photo-1.jpeg"
-              sizes="(max-width: 640px) 100vw, 640px"
-              alt={'메인 사진'}
-              className={'object-cover rounded-md'}
-            />
-          </button>
-          <button onClick={() => openGallerySwiper(1)} className={'relative row-span-2 w-[150px]'}>
-            <Image
-              fill={true}
-              src="/gallery/cards/photo-2.jpeg"
-              sizes="(max-width: 640px) 100vw, 640px"
-              alt={'메인 사진'}
-              className={'object-cover rounded-md'}
-            />
-          </button>
-          <button onClick={() => openGallerySwiper(2)} className={'relative w-[150px]'}>
-            <Image
-              fill={true}
-              src="/gallery/cards/photo-3.jpeg"
-              sizes="(max-width: 640px) 100vw, 640px"
-              alt={'메인 사진'}
-              className={'object-cover rounded-md'}
-            />
-          </button>
-          <button onClick={() => openGallerySwiper(3)} className={'relative row-span-2 w-[150px]'}>
-            <Image
-              fill={true}
-              src="/gallery/cards/photo-4.jpeg"
-              sizes="(max-width: 640px) 100vw, 640px"
-              alt={'메인 사진'}
-              className={'object-cover rounded-md'}
-            />
-          </button>
-          <button onClick={() => openGallerySwiper(4)} className={'relative row-span-2 w-[150px]'}>
-            <Image
-              fill={true}
-              src="/gallery/cards/photo-5.jpeg"
-              sizes="(max-width: 640px) 100vw, 640px"
-              alt={'메인 사진'}
-              className={'object-cover rounded-md'}
-            />
-          </button>
-          <button onClick={() => openGallerySwiper(5)} className={'relative w-[150px]'}>
-            <Image
-              fill={true}
-              src="/gallery/cards/photo-1.jpeg"
-              sizes="(max-width: 640px) 100vw, 640px"
-              alt={'메인 사진'}
-              className={'object-cover rounded-md'}
-            />
-          </button>
-          <button onClick={() => openGallerySwiper(6)} className={'relative row-span-2 w-[150px]'}>
-            <Image
-              fill={true}
-              src="/gallery/cards/photo-2.jpeg"
-              sizes="(max-width: 640px) 100vw, 640px"
-              alt={'메인 사진'}
-              className={'object-cover rounded-md'}
-            />
-          </button>
-          <button onClick={() => openGallerySwiper(7)} className={'relative w-[150px]'}>
-            <Image
-              fill={true}
-              src="/gallery/cards/photo-3.jpeg"
-              sizes="(max-width: 640px) 100vw, 640px"
-              alt={'메인 사진'}
-              className={'object-cover rounded-md'}
-            />
-          </button>
-          <button onClick={() => openGallerySwiper(8)} className={'relative row-span-2 w-[150px]'}>
-            <Image
-              fill={true}
-              src="/gallery/cards/photo-4.jpeg"
-              sizes="(max-width: 640px) 100vw, 640px"
-              alt={'메인 사진'}
-              className={'object-cover rounded-md'}
-            />
-          </button>
-          <button onClick={() => openGallerySwiper(9)} className={'relative row-span-2 w-[150px]'}>
-            <Image
-              fill={true}
-              src="/gallery/cards/photo-5.jpeg"
-              sizes="(max-width: 640px) 100vw, 640px"
-              alt={'메인 사진'}
-              className={'object-cover rounded-md'}
-            />
-          </button>
+          {photoList.map((photo, index) => (
+            <button onClick={() => openGallerySwiper(index)} className={'relative row-span-2 w-[150px]'} key={index}>
+              <Image
+                fill={true}
+                src={`/gallery/cards/photo-${index + 1}.jpeg`}
+                sizes="(max-width: 640px) 100vw, 640px"
+                alt={`갤러리 미리보기 ${index + 1}`}
+                className={'object-cover rounded-md'}
+              />
+            </button>
+          ))}
         </div>
 
       </div>
 
-      {isPopGallery && <GalleryPop initIndex={initGallerySwiperIndex} onClose={() => setIsPopGallery(false)} />}
+      {isPopGallery && <GalleryPop photoList={photoList} initIndex={initGallerySwiperIndex} onClose={() => setIsPopGallery(false)} />}
     </div>
   );
 }
 
 type Swiper = SwiperContainer['swiper'] | null;
 
-function GalleryPop({initIndex, onClose}: {
+function GalleryPop({photoList, initIndex, onClose}: {
+  photoList: Array<string>;
   initIndex: number;
   onClose: () => void;
 }) {
@@ -167,19 +122,6 @@ function GalleryPop({initIndex, onClose}: {
       thumbSwiper.slideTo(swiperIndex);
     }
   }, [swiperIndex, mainSwiper, thumbSwiper]);
-
-  const photoList = [
-    '/gallery/cards/photo-1.jpeg',
-    '/gallery/cards/photo-2.jpeg',
-    '/gallery/cards/photo-3.jpeg',
-    '/gallery/cards/photo-4.jpeg',
-    '/gallery/cards/photo-5.jpeg',
-    '/gallery/cards/photo-6.jpeg',
-    '/gallery/cards/photo-7.jpeg',
-    '/gallery/cards/photo-8.jpeg',
-    '/gallery/cards/photo-9.jpeg',
-    '/gallery/cards/photo-10.jpeg'
-  ];
 
   useEffect(() => {
     setIsTransparentModal(false);
