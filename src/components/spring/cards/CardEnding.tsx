@@ -55,7 +55,7 @@ export default function CardEnding({currentSlideIndex, isKakaoInitialized}: {cur
                   objectType : 'feed',
                   content : {
                     title : '현정 ♥ 상원',
-                    imageUrl : 'https://0614-theta.vercel.app/image-og.png',
+                    imageUrl : 'https://0614-theta.vercel.app/gallery/main.jpeg',
                     link : {
                       webUrl : 'https://0614-theta.vercel.app/invitation/spring/0614',
                       mobileWebUrl : 'https://0614-theta.vercel.app/invitation/spring/0614'

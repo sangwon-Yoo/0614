@@ -130,26 +130,38 @@ export default function CheckJoin({currentSlideIndex}:  {currentSlideIndex: numb
             />
           </div>
           <div className={'flex h-12 justify-center items-center gap-5'}>
-            <label className={'relative w-1/3 h-8'}>
-              참석
+            <div className={'relative w-1/3 h-8'}>
               <input
-                className={'appearance-none bg-white absolute inset-0 flex justify-center items-center rounded-md border border-gray-300 cursor-pointer before:content-["참석"] outline-offset-2 outline-red-200 checked:bg-red-200 checked:border-none'} type={'radio'} name={'join'} value={'Y'}
+                id='input-joinCheck-Y'
+                className={'peer sr-only'} type={'radio'} name={'join'} value={'Y'}
                 onChange={event => setJoinCheckForm(prev => {
                   const value = event.target?.value;
                   return { ...prev, joinYN : value || 'N' };
                 })}
               />
-            </label>
-            <label className={'relative w-1/3 h-8'}>
-              불참
+              <label
+                className={'absolute bg-white inset-0 flex justify-center items-center rounded-md border border-gray-300 cursor-pointer outline-offset-2 outline-red-200  peer-checked:bg-red-200 peer-checked:border-none peer-focus-visible:outline peer-focus-visible:outline-red-200 peer-focus-visible:outline-2'}
+                htmlFor={'input-joinCheck-Y'}
+              >
+                참석
+              </label>
+            </div>
+            <div className={'relative w-1/3 h-8'}>
               <input
-                className={'appearance-none bg-white absolute inset-0 flex justify-center items-center rounded-md border border-gray-300 cursor-pointer before:content-["불참"] outline-offset-2 outline-red-200  checked:bg-red-200 checked:border-none'} type={'radio'} name={'join'} value={'N'}
+                id='input-joinCheck-N'
+                className={'peer sr-only'} type={'radio'} name={'join'} value={'N'}
                 onChange={event => setJoinCheckForm(prev => {
                   const value = event.target?.value;
                   return { ...prev, joinYN : value || 'N' };
                 })}
               />
-            </label>
+              <label
+                className={'absolute bg-white inset-0 flex justify-center items-center rounded-md border border-gray-300 cursor-pointer outline-offset-2 outline-red-200  peer-checked:bg-red-200 peer-checked:border-none peer-focus-visible:outline peer-focus-visible:outline-red-200 peer-focus-visible:outline-2'}
+                htmlFor={'input-joinCheck-N'}
+              >
+                불참
+              </label>
+            </div>
           </div>
         </div>
 
