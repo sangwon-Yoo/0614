@@ -32,7 +32,7 @@ export default function CardMain() {
           'absolute text-lg font-medium w-full flex flex-col items-center bottom-10 text-white'
         }
       >
-        <div>유상원 🩷 허현정</div>
+        <div>유상원 &#x2665; 허현정</div>
         <div>2025년 6월 14일 오후 2시 30분</div>
         <div>엘리에나호텔웨딩, 3F 임페리얼 홀</div>
       </div>
