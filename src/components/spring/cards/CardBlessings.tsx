@@ -50,7 +50,7 @@ export default function CardBlessings({currentSlideIndex, selfSlideIndex}: {curr
         >
           <div className={'flex flex-col items-center gap-5'}>
             <button
-              className={'flex gap-4'}
+              className={'flex items-center gap-4'}
               onClick={() => {
               setIsRenderMansFamilyAnimation(true);
               if(isShowMansFamily) {
@@ -181,7 +181,7 @@ export default function CardBlessings({currentSlideIndex, selfSlideIndex}: {curr
             )}
 
             <button
-              className={'flex gap-4'}
+              className={'flex items-center gap-4'}
               onClick={() => {
               setIsRenderGirlsFamilyAnimation(true);
               if(isShowGirlsFamily) {
