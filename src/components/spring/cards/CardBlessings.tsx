@@ -36,7 +36,7 @@ export default function CardBlessings({currentSlideIndex, selfSlideIndex}: {curr
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: 'easeOut' }}
           >
-            {`축하의 따뜻한 마음`}
+            {`따뜻한 축하의 마음,`}
             <br/>
             {`그 마음을 소중히 간직하겠습니다.`}
           </motion.p>
@@ -78,10 +78,10 @@ export default function CardBlessings({currentSlideIndex, selfSlideIndex}: {curr
                 transition={{ duration: 1, ease: 'easeOut' }}
               >
                 <div className={'flex flex-none justify-between items-center h-14'}>
-                  <div className={'flex flex-col justify-evenly items-center text-xs h-full'}>
+                  <div className={'flex flex-col justify-evenly items-center text-xs h-full w-32'}>
                     <span className={'font-bold'}>신랑 아버지 유진재</span>
                     <div className={'flex justify-evenly h-4 w-20'}>
-                      <a href={'tel:01036149589'} className={'flex items-center'}>
+                      <a href={'tel:01038386339'} className={'flex items-center'}>
                         <Image
                           src="/image/icons/phone-blue.svg"
                           alt={'phone'}
@@ -89,7 +89,7 @@ export default function CardBlessings({currentSlideIndex, selfSlideIndex}: {curr
                           height={16}
                         />
                       </a>
-                      <a href={'sms:01036149589'} className={'flex items-center'}>
+                      <a href={'sms:01038386339'} className={'flex items-center'}>
                         <Image
                           src="/image/icons/message-blue.svg"
                           alt={'message'}
@@ -99,9 +99,9 @@ export default function CardBlessings({currentSlideIndex, selfSlideIndex}: {curr
                       </a>
                     </div>
                   </div>
-                  <div className={'flex flex-col justify-evenly items-center text-xs h-full'}>
-                    <span className={'leading-5 text-center'}>신한은행 518-055047-01-111</span>
-                    <CopyToClipboard text={'기업은행 518-055047-01-011'} onCopy={() => {}}>
+                  <div className={'flex flex-col justify-evenly items-center text-xs h-full w-[180px]'}>
+                    <span className={'leading-5 text-center'}>부산은행 066-12-0404661</span>
+                    <CopyToClipboard text={'066-12-0404661'} onCopy={() => {}}>
                       <button
                         className={'h-4 bg-blue-200 rounded-lg px-3'}
                       >
@@ -111,10 +111,10 @@ export default function CardBlessings({currentSlideIndex, selfSlideIndex}: {curr
                   </div>
                 </div>
                 <div className={'flex flex-none justify-between items-center h-14'}>
-                  <div className={'flex flex-col justify-evenly items-center text-xs h-full'}>
-                    <span className={'font-bold'}>신랑 아버지 유진재</span>
+                  <div className={'flex flex-col justify-evenly items-center text-xs h-full w-32'}>
+                    <span className={'font-bold'}>신랑 어머니 윤혜정</span>
                     <div className={'flex justify-evenly h-4 w-20'}>
-                      <a href={'tel:01036149589'} className={'flex items-center'}>
+                      <a href={'tel:01038376339'} className={'flex items-center'}>
                         <Image
                           src="/image/icons/phone-blue.svg"
                           alt={'phone'}
@@ -122,7 +122,7 @@ export default function CardBlessings({currentSlideIndex, selfSlideIndex}: {curr
                           height={16}
                         />
                       </a>
-                      <a href={'sms:01036149589'} className={'flex items-center'}>
+                      <a href={'sms:01038376339'} className={'flex items-center'}>
                         <Image
                           src="/image/icons/message-blue.svg"
                           alt={'message'}
@@ -132,9 +132,9 @@ export default function CardBlessings({currentSlideIndex, selfSlideIndex}: {curr
                       </a>
                     </div>
                   </div>
-                  <div className={'flex flex-col justify-evenly items-center text-xs h-full'}>
-                    <span className={'leading-5 text-center'}>신한은행 518-055047-01-111</span>
-                    <CopyToClipboard text={'기업은행 518-055047-01-011'} onCopy={() => {}}>
+                  <div className={'flex flex-col justify-evenly items-center text-xs h-full w-[180px]'}>
+                    <span className={'leading-5 text-center'}>국민은행 444001-04-004281</span>
+                    <CopyToClipboard text={'444001-04-004281'} onCopy={() => {}}>
                       <button
                         className={'h-4 bg-blue-200 rounded-lg px-3'}
                       >
@@ -144,10 +144,10 @@ export default function CardBlessings({currentSlideIndex, selfSlideIndex}: {curr
                   </div>
                 </div>
                 <div className={'flex flex-none justify-between items-center h-14'}>
-                  <div className={'flex flex-col justify-evenly items-center text-xs h-full'}>
-                    <span className={'font-bold'}>신랑 아버지 유진재</span>
+                  <div className={'flex flex-col justify-evenly items-center text-xs h-full w-32'}>
+                    <span className={'font-bold'}>신랑 유상원</span>
                     <div className={'flex justify-evenly h-4 w-20'}>
-                      <a href={'tel:01036149589'} className={'flex items-center'}>
+                      <a href={'tel:01064756339'} className={'flex items-center'}>
                         <Image
                           src="/image/icons/phone-blue.svg"
                           alt={'phone'}
@@ -155,7 +155,7 @@ export default function CardBlessings({currentSlideIndex, selfSlideIndex}: {curr
                           height={16}
                         />
                       </a>
-                      <a href={'sms:01036149589'} className={'flex items-center'}>
+                      <a href={'sms:01064756339'} className={'flex items-center'}>
                         <Image
                           src="/image/icons/message-blue.svg"
                           alt={'message'}
@@ -165,9 +165,9 @@ export default function CardBlessings({currentSlideIndex, selfSlideIndex}: {curr
                       </a>
                     </div>
                   </div>
-                  <div className={'flex flex-col justify-evenly items-center text-xs h-full'}>
-                    <span className={'leading-5 text-center'}>신한은행 518-055047-01-111</span>
-                    <CopyToClipboard text={'기업은행 518-055047-01-011'} onCopy={() => {}}>
+                  <div className={'flex flex-col justify-evenly items-center text-xs h-full w-[180px]'}>
+                    <span className={'leading-5 text-center'}>기업은행 518-055047-01-011</span>
+                    <CopyToClipboard text={'518-055047-01-011<'} onCopy={() => {}}>
                       <button
                         className={'h-4 bg-blue-200 rounded-lg px-3'}
                       >
@@ -209,10 +209,10 @@ export default function CardBlessings({currentSlideIndex, selfSlideIndex}: {curr
                 transition={{ duration: 1, ease: 'easeOut' }}
               >
                 <div className={'flex flex-none justify-between items-center h-14'}>
-                  <div className={'flex flex-col justify-evenly items-center text-xs h-full'}>
+                  <div className={'flex flex-col justify-evenly items-center text-xs h-full w-32'}>
                     <span className={'font-bold'}>신부 아버지 허만인</span>
                     <div className={'flex justify-evenly h-4 w-20'}>
-                      <a href={'tel:01036149589'} className={'flex items-center'}>
+                      <a href={'tel:01090000162'} className={'flex items-center'}>
                         <Image
                           src="/image/icons/phone-pink.svg"
                           alt={'phone'}
@@ -220,7 +220,7 @@ export default function CardBlessings({currentSlideIndex, selfSlideIndex}: {curr
                           height={16}
                         />
                       </a>
-                      <a href={'sms:01036149589'} className={'flex items-center'}>
+                      <a href={'sms:01090000162'} className={'flex items-center'}>
                         <Image
                           src="/image/icons/message-pink.svg"
                           alt={'message'}
@@ -230,9 +230,9 @@ export default function CardBlessings({currentSlideIndex, selfSlideIndex}: {curr
                       </a>
                     </div>
                   </div>
-                  <div className={'flex flex-col justify-evenly items-center text-xs h-full'}>
-                    <span className={'leading-5 text-center'}>신한은행 518-055047-01-111</span>
-                    <CopyToClipboard text={'기업은행 518-055047-01-011'} onCopy={() => {}}>
+                  <div className={'flex flex-col justify-evenly items-center text-xs h-full w-[180px]'}>
+                    <span className={'leading-5 text-center'}>신한은행 110-088-125258</span>
+                    <CopyToClipboard text={'110-088-125258'} onCopy={() => {}}>
                       <button
                         className={'h-4 bg-red-200 rounded-lg px-3'}
                       >
@@ -242,10 +242,10 @@ export default function CardBlessings({currentSlideIndex, selfSlideIndex}: {curr
                   </div>
                 </div>
                 <div className={'flex flex-none justify-between items-center h-14'}>
-                  <div className={'flex flex-col justify-evenly items-center text-xs h-full'}>
-                    <span className={'font-bold'}>신부 아버지 허만인</span>
+                  <div className={'flex flex-col justify-evenly items-center text-xs h-full w-32'}>
+                    <span className={'font-bold'}>신부 어머니 이정자</span>
                     <div className={'flex justify-evenly h-4 w-20'}>
-                      <a href={'tel:01036149589'} className={'flex items-center'}>
+                      <a href={'tel:01041199589'} className={'flex items-center'}>
                         <Image
                           src="/image/icons/phone-pink.svg"
                           alt={'phone'}
@@ -253,7 +253,7 @@ export default function CardBlessings({currentSlideIndex, selfSlideIndex}: {curr
                           height={16}
                         />
                       </a>
-                      <a href={'sms:01036149589'} className={'flex items-center'}>
+                      <a href={'sms:01041199589'} className={'flex items-center'}>
                         <Image
                           src="/image/icons/message-pink.svg"
                           alt={'message'}
@@ -263,9 +263,9 @@ export default function CardBlessings({currentSlideIndex, selfSlideIndex}: {curr
                       </a>
                     </div>
                   </div>
-                  <div className={'flex flex-col justify-evenly items-center text-xs h-full'}>
-                    <span className={'leading-5 text-center'}>신한은행 518-055047-01-111</span>
-                    <CopyToClipboard text={'기업은행 518-055047-01-011'} onCopy={() => {}}>
+                  <div className={'flex flex-col justify-evenly items-center text-xs h-full w-[180px]'}>
+                    <span className={'leading-5 text-center'}>국민은행 534602-01-034541</span>
+                    <CopyToClipboard text={'534602-01-034541'} onCopy={() => {}}>
                       <button
                         className={'h-4 bg-red-200 rounded-lg px-3'}
                       >
@@ -275,8 +275,8 @@ export default function CardBlessings({currentSlideIndex, selfSlideIndex}: {curr
                   </div>
                 </div>
                 <div className={'flex flex-none justify-between items-center h-14'}>
-                  <div className={'flex flex-col justify-evenly items-center text-xs h-full'}>
-                    <span className={'font-bold'}>신부 아버지 허만인</span>
+                  <div className={'flex flex-col justify-evenly items-center text-xs h-full w-32'}>
+                    <span className={'font-bold'}>신부 허현정</span>
                     <div className={'flex justify-evenly h-4 w-20'}>
                       <a href={'tel:01036149589'} className={'flex items-center'}>
                         <Image
@@ -296,9 +296,9 @@ export default function CardBlessings({currentSlideIndex, selfSlideIndex}: {curr
                       </a>
                     </div>
                   </div>
-                  <div className={'flex flex-col justify-evenly items-center text-xs h-full'}>
-                    <span className={'leading-5 text-center'}>신한은행 518-055047-01-111</span>
-                    <CopyToClipboard text={'기업은행 518-055047-01-011'} onCopy={() => {}}>
+                  <div className={'flex flex-col justify-evenly items-center text-xs h-full w-[180px]'}>
+                    <span className={'leading-5 text-center'}>토스뱅크 1000-1049-3257</span>
+                    <CopyToClipboard text={'1000-1049-3257'} onCopy={() => {}}>
                       <button
                         className={'h-4 bg-red-200 rounded-lg px-3'}
                       >

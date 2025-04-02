@@ -54,7 +54,7 @@ export default function CardEnding({currentSlideIndex, isKakaoInitialized}: {cur
                   container: ref,
                   objectType : 'feed',
                   content : {
-                    title : '현정 ♥ 상원',
+                    title : '상원 ♥ 현정',
                     imageUrl : 'https://0614-theta.vercel.app/gallery/main.jpeg',
                     link : {
                       webUrl : 'https://0614-theta.vercel.app/invitation/spring/0614',
@@ -73,7 +73,7 @@ export default function CardEnding({currentSlideIndex, isKakaoInitialized}: {cur
             </div>
             <div
               onClick={() => window.open(`https://band.us/plugin/share?body=${encodeURIComponent(
-                '우리 결혼해요!\n현정 ♥ 상원\n모바일 청첩장 링크 : https://0614-theta.vercel.app/invitation/spring/0614'
+                '우리 결혼해요!\n상원 ♥ 현정\n모바일 청첩장 링크 : https://0614-theta.vercel.app/invitation/spring/0614'
               )}&route=0614-theta.vercel.app`, "_blank")}
             >
               <Image

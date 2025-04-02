@@ -153,7 +153,7 @@ function GalleryPop({photoList, initIndex, onClose}: {
             setSwiperIndex={setSwiperIndex}
           />
         </div>
-        <div className={'flex-initial h-[12%] px-2 py-2'}>
+        <div className={'flex-initial h-[12%] px-2 py-2 min-h-20'}>
           <SwiperGalleryThumb
             photoList={photoList}
             initIndex={initIndex}
