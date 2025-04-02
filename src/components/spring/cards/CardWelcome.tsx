@@ -49,20 +49,20 @@ export default function CardWelcome({currentSlideIndex}: {currentSlideIndex: num
           transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
         >
           <p className={'whitespace-nowrap mb-6 flex-none w-48 leading-7'}>
-            <span className={'font-bold'}>{' 유 진 재 '}</span>
-            &#183;
-            <span className={'font-bold'}>{' 윤 혜 정 '}</span>
-            {'의 아들'}
+            <span className={'inline-block font-bold w-[60px] text-center'}>{'유 진 재'}</span>
+            <span className={'inline-block font-bold w-3 text-center'}>&#183;</span>
+            <span className={'inline-block font-bold w-[60px] text-center'}>{'윤 혜 정'}</span>
+            <span>{'의 아들'}</span>
             <br />
-            <span className={'font-bold'}>{' 허 만 인 '}</span>
-            &#183;
-            <span className={'font-bold'}>{' 이 정 자 '}</span>
-            {'의 딸'}
+            <span className={'inline-block font-bold w-[60px] text-center'}>{'허 만 인'}</span>
+            <span className={'inline-block font-bold w-3 text-center'}>&#183;</span>
+            <span className={'inline-block font-bold w-[60px] text-center'}>{'이 정 자'}</span>
+            <span>{'의 딸'}</span>
           </p>
-          <p className={'whitespace-nowrap mb-6 flex-none w-14 leading-7'}>
-            <span className={'font-bold'}>{' 유 상 원 '}</span>
+          <p className={'whitespace-nowrap mb-6 flex-none w-[60px] leading-7'}>
+            <span className={'inline-block font-bold w-[60px] text-center'}>{'유 상 원'}</span>
             <br />
-            <span className={'font-bold'}>{' 허 현 정 '}</span>
+            <span className={'inline-block font-bold w-[60px] text-center'}>{'허 현 정'}</span>
           </p>
         </motion.div>
         <motion.div

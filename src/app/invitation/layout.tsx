@@ -3,9 +3,9 @@ import { Viewport } from 'next';
 import Script from 'next/script';
 
 export const metadata = {
-  title: '현정 ♥ 상원',
+  title: '상원 ♥ 현정',
   openGraph: {
-    title: '현정 ♥ 상원',
+    title: '상원 ♥ 현정',
     description: `We're getting married.`,
     images : ['/gallery/main.jpeg']
   },
