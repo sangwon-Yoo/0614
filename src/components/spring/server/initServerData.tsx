@@ -4,7 +4,7 @@ export type DDayInfo = {remains: string; dDay: string;};
 
 export default function InitServerData() {
 
-  const targetDate = '2025-04-05';
+  const targetDate = '2025-06-14';
   // 현재 시간을 '서울(Asia/Seoul)' 타임존 기준으로 변환 (Date 객체로 변환)
   const now = new Date(new Date().toLocaleString("en-US", { timeZone: "Asia/Seoul" }));
 

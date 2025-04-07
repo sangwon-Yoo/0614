@@ -3,6 +3,7 @@ import mainTextAnimation from '@/assets/lottie/mainTextAnimation.json';
 import { DelayedLottie } from '@/components/atoms/DelayedLottie';
 
 export default function CardMain() {
+
   return (
     <div className={'relative h-full'}>
       <div className={'relative h-full'}>
@@ -14,27 +15,24 @@ export default function CardMain() {
           className={'object-cover'}
         />
         <div
-          className={
-            'absolute h-full w-full bg-gradient-to-t from-[#000000AA] via-transparent via-25%'
-          }
+          className={'absolute h-full w-full bg-gradient-to-t from-[#000000AA] via-transparent via-20%'}
           aria-hidden={true}
         />
       </div>
 
-      <div
-        className={'absolute flex justify-center items-center w-full top-0'}
-      >
-        <DelayedLottie delay={1500} lottieProps={{ animationData : mainTextAnimation, loop : false }} />
+      <div className={'absolute flex justify-between top-0 h-[10%] w-full font-PTSerif text-white text-sm leading-[22px] tracking-wide'}>
+        <span className={'flex justify-center items-center w-32'}>YOOSANGWON</span>
+        <span className={'flex justify-center items-center w-32'}>HEOHYUNJUNG</span>
       </div>
 
-      <div
-        className={
-          'absolute text-lg font-medium w-full flex flex-col items-center bottom-10 text-white'
-        }
-      >
-        <div>유상원 &#x2665; 허현정</div>
-        <div>2025년 6월 14일 오후 2시 30분</div>
-        <div>엘리에나호텔웨딩, 3F 임페리얼 홀</div>
+      <div className={'absolute flex flex-col bottom-0 w-full mb-[10%]'}>
+        <div>
+          <DelayedLottie delay={1500} lottieProps={{ animationData : mainTextAnimation, loop : false }} />
+        </div>
+        <p className={'flex flex-col justify-center items-center h-10 font-PTSerif text-white text-sm leading-[22px] tracking-wide mt-6'}>
+          <span>ELIENAHOTEL IMPERIALHALL</span>
+          <span>JUNE 14, 2025 SAT 14:30PM</span>
+        </p>
       </div>
     </div>
   );

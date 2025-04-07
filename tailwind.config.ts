@@ -15,6 +15,7 @@ export default {
       fontFamily: {
         gowunBatang: ["GowunBatang", "sans-serif", "Arial"],
         greatVibes: ["GreatVibes", "sans-serif", "Arial"],
+        PTSerif: ["PT Serif", "sans-serif", "Arial"]
       }
     },
   },
