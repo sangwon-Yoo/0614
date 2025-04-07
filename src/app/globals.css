@@ -24,6 +24,13 @@
     font-display: swap;
     src: url(/font/GreatVibes-Regular.ttf) format('truetype');
   }
+  @font-face {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/font/PTSerif-Regular.ttf) format('truetype');
+  }
 }
 
 :root {
