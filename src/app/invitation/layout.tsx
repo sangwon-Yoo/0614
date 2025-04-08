@@ -6,7 +6,7 @@ export const metadata = {
   title: '상원 ♥ 현정',
   openGraph: {
     title: '상원 ♥ 현정',
-    description: `We're getting married.`,
+    description: `6월 14일 2시30분 엘리에나호텔`,
     images : ['/gallery/main.jpg']
   },
 }
