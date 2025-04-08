@@ -31,7 +31,7 @@ export default function CardMain() {
         </div>
         <p className={'flex flex-col justify-center items-center h-10 font-PTSerif text-white text-sm leading-[22px] tracking-wide mt-6'}>
           <span>ELIENAHOTEL IMPERIALHALL</span>
-          <span>JUNE 14, 2025 SAT 14:30PM</span>
+          <span>JUNE 14, 2025 SAT 02:30PM</span>
         </p>
       </div>
     </div>
