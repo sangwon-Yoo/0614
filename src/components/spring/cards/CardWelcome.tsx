@@ -42,26 +42,24 @@ export default function CardWelcome({currentSlideIndex}: {currentSlideIndex: num
           />
         </div>
         <motion.div
-          className={'flex-none flex flex-row justify-center'}
+          className={'flex flex-col justify-center items-center'}
           key={`welcome-1-${currentSlideIndex}`}
           initial={{ y: 25, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
         >
-          <p className={'whitespace-nowrap mb-6 flex-none w-48 leading-7'}>
+          <p className={'whitespace-nowrap mb-2 flex leading-7'}>
             <span className={'inline-block font-bold w-[60px] text-center'}>{'유 진 재'}</span>
             <span className={'inline-block font-bold w-3 text-center'}>&#183;</span>
             <span className={'inline-block font-bold w-[60px] text-center'}>{'윤 혜 정'}</span>
-            <span>{'의 아들'}</span>
-            <br />
+            <span className={'inline-block w-[60px] whitespace-pre'}>{' 의 아들'}</span>
+            <span className={'inline-block font-bold w-[60px] text-center'}>{'유 상 원'}</span>
+          </p>
+          <p className={'whitespace-nowrap mb-2 flex leading-7'}>
             <span className={'inline-block font-bold w-[60px] text-center'}>{'허 만 인'}</span>
             <span className={'inline-block font-bold w-3 text-center'}>&#183;</span>
             <span className={'inline-block font-bold w-[60px] text-center'}>{'이 정 자'}</span>
-            <span>{'의 딸'}</span>
-          </p>
-          <p className={'whitespace-nowrap mb-6 flex-none w-[60px] leading-7'}>
-            <span className={'inline-block font-bold w-[60px] text-center'}>{'유 상 원'}</span>
-            <br />
+            <span className={'inline-block w-[60px] whitespace-pre'}>{' 의 딸'}</span>
             <span className={'inline-block font-bold w-[60px] text-center'}>{'허 현 정'}</span>
           </p>
         </motion.div>
