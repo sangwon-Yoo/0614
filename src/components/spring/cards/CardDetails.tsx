@@ -78,7 +78,7 @@ export default function CardDetails({currentSlideIndex}: {currentSlideIndex: num
                     {`식사는 코스 요리로 준비됩니다.`}
                     <br/>
                     <br/>
-                    {`" 수제 떡 / 에피타이저 / 연어 샐러드`}
+                    {`" 수제 떡 / 애피타이저 연어 샐러드`}
                     <br/>
                     {`송로버섯 스프 / 안심 스테이크`}
                     <br/>
@@ -87,7 +87,7 @@ export default function CardDetails({currentSlideIndex}: {currentSlideIndex: num
                     <br/>
                     {`식사를 하시지 않는 분들은 식권을 지참하시어`}
                     <br/>
-                    {`1층에서 와인과 교환해 가시기 바랍니다.`}
+                    {`1층에서 답례품과 교환해 가시기 바랍니다.`}
                   </>
                 )}
                 {activeTab == '주차' && (
