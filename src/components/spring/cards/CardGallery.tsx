@@ -25,36 +25,36 @@ export default function CardGallery({currentSlideIndex}: {currentSlideIndex: num
   }, [isPopGallery, swiper]);
 
   const photoList = useMemo(() => [
-    '/gallery/cards/photo-1.jpeg',
-    '/gallery/cards/photo-2.jpeg',
-    '/gallery/cards/photo-3.jpeg',
-    '/gallery/cards/photo-4.jpeg',
-    '/gallery/cards/photo-5.jpeg',
-    '/gallery/cards/photo-6.jpeg',
-    '/gallery/cards/photo-7.jpeg',
-    '/gallery/cards/photo-8.jpeg',
-    '/gallery/cards/photo-9.jpeg',
-    '/gallery/cards/photo-10.jpeg',
-    '/gallery/cards/photo-11.jpeg',
-    '/gallery/cards/photo-12.jpeg',
-    '/gallery/cards/photo-13.jpeg',
-    '/gallery/cards/photo-14.jpeg',
-    '/gallery/cards/photo-15.jpeg',
-    '/gallery/cards/photo-16.jpeg',
-    '/gallery/cards/photo-17.jpeg',
-    '/gallery/cards/photo-18.jpeg',
-    '/gallery/cards/photo-19.jpeg',
-    '/gallery/cards/photo-20.jpeg',
-    '/gallery/cards/photo-21.jpeg',
-    '/gallery/cards/photo-22.jpeg',
-    '/gallery/cards/photo-23.jpeg',
-    '/gallery/cards/photo-24.jpeg',
-    '/gallery/cards/photo-25.jpeg',
-    '/gallery/cards/photo-26.jpeg',
-    '/gallery/cards/photo-27.jpeg',
-    '/gallery/cards/photo-28.jpeg',
-    '/gallery/cards/photo-29.jpeg',
-    '/gallery/cards/photo-30.jpeg',
+    '/gallery/cards/01.png',
+    '/gallery/cards/02.png',
+    '/gallery/cards/03.png',
+    '/gallery/cards/04.png',
+    '/gallery/cards/05.png',
+    '/gallery/cards/06.png',
+    '/gallery/cards/07.png',
+    '/gallery/cards/08.png',
+    '/gallery/cards/09.png',
+    '/gallery/cards/10.png',
+    '/gallery/cards/11.png',
+    '/gallery/cards/12.png',
+    '/gallery/cards/13.png',
+    '/gallery/cards/14.png',
+    '/gallery/cards/15.png',
+    '/gallery/cards/16.png',
+    '/gallery/cards/17.png',
+    '/gallery/cards/18.png',
+    '/gallery/cards/19.png',
+    '/gallery/cards/20.png',
+    '/gallery/cards/21.png',
+    '/gallery/cards/22.png',
+    '/gallery/cards/23.png',
+    '/gallery/cards/24.png',
+    '/gallery/cards/25.png',
+    '/gallery/cards/26.png',
+    '/gallery/cards/27.png',
+    '/gallery/cards/28.png',
+    '/gallery/cards/29.png',
+    '/gallery/cards/30.png',
   ], []) ;
 
 
@@ -84,7 +84,7 @@ export default function CardGallery({currentSlideIndex}: {currentSlideIndex: num
             <button onClick={() => openGallerySwiper(index)} className={'relative row-span-2 w-[150px]'} key={index}>
               <Image
                 fill={true}
-                src={`/gallery/cards/photo-${index + 1}.jpeg`}
+                src={photo}
                 sizes="(max-width: 640px) 100vw, 640px"
                 alt={`갤러리 미리보기 ${index + 1}`}
                 className={'object-cover rounded-md'}
