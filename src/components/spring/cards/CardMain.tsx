@@ -9,7 +9,7 @@ export default function CardMain() {
       <div className={'relative h-full'}>
         <Image
           fill={true}
-          src="/gallery/main.jpeg"
+          src="/gallery/main.png"
           sizes="(max-width: 640px) 100vw, 640px"
           alt={'메인 사진'}
           className={'object-cover'}
