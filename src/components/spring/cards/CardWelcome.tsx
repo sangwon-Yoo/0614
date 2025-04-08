@@ -49,18 +49,18 @@ export default function CardWelcome({currentSlideIndex}: {currentSlideIndex: num
           transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
         >
           <p className={'whitespace-nowrap mb-2 flex leading-7'}>
-            <span className={'inline-block font-bold w-[60px] text-center'}>{'유 진 재'}</span>
-            <span className={'inline-block font-bold w-3 text-center'}>&#183;</span>
-            <span className={'inline-block font-bold w-[60px] text-center'}>{'윤 혜 정'}</span>
-            <span className={'inline-block w-[60px] whitespace-pre'}>{' 의 아들'}</span>
-            <span className={'inline-block font-bold w-[60px] text-center'}>{'유 상 원'}</span>
+            <span className={'flex-none font-bold w-[60px] text-center'}>{'유 진 재'}</span>
+            <span className={'flex-none font-bold w-3 text-center'}>&#183;</span>
+            <span className={'flex-none font-bold w-[60px] text-center'}>{'윤 혜 정'}</span>
+            <span className={'flex-none w-[60px] ml-1'}>{'의 아들'}</span>
+            <span className={'flex-none font-bold w-[60px] text-center'}>{'유 상 원'}</span>
           </p>
           <p className={'whitespace-nowrap mb-2 flex leading-7'}>
-            <span className={'inline-block font-bold w-[60px] text-center'}>{'허 만 인'}</span>
-            <span className={'inline-block font-bold w-3 text-center'}>&#183;</span>
-            <span className={'inline-block font-bold w-[60px] text-center'}>{'이 정 자'}</span>
-            <span className={'inline-block w-[60px] whitespace-pre'}>{' 의 딸'}</span>
-            <span className={'inline-block font-bold w-[60px] text-center'}>{'허 현 정'}</span>
+            <span className={'flex-none font-bold w-[60px] text-center'}>{'허 만 인'}</span>
+            <span className={'flex-none font-bold w-3 text-center'}>&#183;</span>
+            <span className={'flex-none font-bold w-[60px] text-center'}>{'이 정 자'}</span>
+            <span className={'flex-none w-[60px] ml-1'}>{'의 딸'}</span>
+            <span className={'flex-none font-bold w-[60px] text-center'}>{'허 현 정'}</span>
           </p>
         </motion.div>
         <motion.div
