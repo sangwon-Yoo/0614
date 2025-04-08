@@ -7,7 +7,7 @@ export const metadata = {
   openGraph: {
     title: '상원 ♥ 현정',
     description: `We're getting married.`,
-    images : ['/gallery/main.png']
+    images : ['/gallery/main.jpg']
   },
 }
 export const viewport: Viewport = {
