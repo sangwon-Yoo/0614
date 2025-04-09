@@ -49,18 +49,18 @@ export default function CardWelcome({currentSlideIndex}: {currentSlideIndex: num
           transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
         >
           <div className={'flex mb-2 leading-7'}>
-            <div className={'flex-auto font-bold w-[60px] text-center'}>{'유 진 재'}</div>
+            <div className={'flex-auto font-bold w-16 text-center'}>{'유 진 재'}</div>
             <div className={'flex-auto font-bold w-3 text-center'}>&#183;</div>
-            <div className={'flex-auto font-bold w-[60px] text-center'}>{'윤 혜 정'}</div>
-            <div className={'flex-auto w-[60px] ml-1'}>{'의 아들'}</div>
-            <div className={'flex-auto font-bold w-[60px] text-center'}>{'유 상 원'}</div>
+            <div className={'flex-auto font-bold w-16 text-center'}>{'윤 혜 정'}</div>
+            <div className={'flex-auto w-16 ml-1'}>{'의 아들'}</div>
+            <div className={'flex-auto font-bold w-16 text-center'}>{'유 상 원'}</div>
           </div>
           <div className={'flex mb-2 leading-7'}>
-            <div className={'flex-auto font-bold w-[60px] text-center'}>{'허 만 인'}</div>
+            <div className={'flex-auto font-bold w-16 text-center'}>{'허 만 인'}</div>
             <div className={'flex-auto font-bold w-3 text-center'}>&#183;</div>
-            <div className={'flex-auto font-bold w-[60px] text-center'}>{'이 정 자'}</div>
-            <div className={'flex-auto w-[60px] ml-1'}>{'의 딸'}</div>
-            <div className={'flex-auto font-bold w-[60px] text-center'}>{'허 현 정'}</div>
+            <div className={'flex-auto font-bold w-16 text-center'}>{'이 정 자'}</div>
+            <div className={'flex-auto w-16 ml-1'}>{'의 딸'}</div>
+            <div className={'flex-auto font-bold w-16 text-center'}>{'허 현 정'}</div>
           </div>
         </motion.div>
         <motion.div
