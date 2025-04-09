@@ -42,25 +42,25 @@ export default function CardWelcome({currentSlideIndex}: {currentSlideIndex: num
           />
         </div>
         <motion.div
-          className={'flex flex-col justify-center items-center overflow-x-auto w-full'}
+          className={'flex flex-col justify-center items-center overflow-x-auto w-full whitespace-pre'}
           key={`welcome-1-${currentSlideIndex}`}
           initial={{ y: 25, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
         >
           <div className={'flex mb-2 leading-7'}>
-            <div className={'flex-none font-bold w-[60px] text-center'}>{'유 진 재'}</div>
-            <div className={'flex-none font-bold w-3 text-center'}>&#183;</div>
-            <div className={'flex-none font-bold w-[60px] text-center'}>{'윤 혜 정'}</div>
-            <div className={'flex-none w-[60px] ml-1'}>{'의 아들'}</div>
-            <div className={'flex-none font-bold w-[60px] text-center'}>{'유 상 원'}</div>
+            <div className={'flex-auto font-bold w-[60px] text-center'}>{'유 진 재'}</div>
+            <div className={'flex-auto font-bold w-3 text-center'}>&#183;</div>
+            <div className={'flex-auto font-bold w-[60px] text-center'}>{'윤 혜 정'}</div>
+            <div className={'flex-auto w-[60px] ml-1'}>{'의 아들'}</div>
+            <div className={'flex-auto font-bold w-[60px] text-center'}>{'유 상 원'}</div>
           </div>
           <div className={'flex mb-2 leading-7'}>
-            <div className={'flex-none font-bold w-[60px] text-center'}>{'허 만 인'}</div>
-            <div className={'flex-none font-bold w-3 text-center'}>&#183;</div>
-            <div className={'flex-none font-bold w-[60px] text-center'}>{'이 정 자'}</div>
-            <div className={'flex-none w-[60px] ml-1'}>{'의 딸'}</div>
-            <div className={'flex-none font-bold w-[60px] text-center'}>{'허 현 정'}</div>
+            <div className={'flex-auto font-bold w-[60px] text-center'}>{'허 만 인'}</div>
+            <div className={'flex-auto font-bold w-3 text-center'}>&#183;</div>
+            <div className={'flex-auto font-bold w-[60px] text-center'}>{'이 정 자'}</div>
+            <div className={'flex-auto w-[60px] ml-1'}>{'의 딸'}</div>
+            <div className={'flex-auto font-bold w-[60px] text-center'}>{'허 현 정'}</div>
           </div>
         </motion.div>
         <motion.div
