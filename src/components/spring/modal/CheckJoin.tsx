@@ -77,7 +77,7 @@ export default function CheckJoin({currentSlideIndex}:  {currentSlideIndex: numb
           flex flex-col justify-center
         `}
     >
-      <div className={`flex flex-col justify-between h-1/2 mx-10 rounded-lg bg-slate-100 py-8 px-5`}>
+      <div className={`flex flex-col justify-between mx-10 rounded-lg bg-slate-100 py-8 px-5`}>
         <p className={'flex justify-center items-center text-center text-sm'}>
           {`편안히 모시기 위해`}
           <br />
