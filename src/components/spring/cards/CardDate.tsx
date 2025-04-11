@@ -1,12 +1,24 @@
+import { DDayInfo } from '@/app/invitation/apis/get/dDay/route';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { DDayInfo } from '@/components/spring/server/initServerData';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-export default function CardDate({currentSlideIndex, dDayInfo}: {currentSlideIndex: number, dDayInfo: DDayInfo}) {
+export default function CardDate({currentSlideIndex}: {currentSlideIndex: number}) {
+
+  const getNow = async () => {
+    try {
+      return (await fetch('/invitation/apis/get/dDay')).json() as Promise<DDayInfo>;
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  const [dDayInfo, setDDayInfo] = useState<DDayInfo>();
 
   useEffect(() => {
-    console.log(dDayInfo.remains)
+    getNow().then(data => {
+      console.log(dDayInfo?.remains)
+      setDDayInfo(data)
+    });
   }, []);
 
   const monthDays: Array<{ date: number, day: 'sun' | 'sat' | 'weekdays', theDay?: boolean}> = [
@@ -75,7 +87,7 @@ export default function CardDate({currentSlideIndex, dDayInfo}: {currentSlideInd
               {`D`}
             </span>
             <span className={'mt-6 text-2xl'}>
-              {` - ${dDayInfo.dDay}`}
+              {` - ${dDayInfo?.dDay}`}
             </span>
           </motion.div>
         </div>
