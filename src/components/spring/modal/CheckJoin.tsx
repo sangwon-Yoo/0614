@@ -35,7 +35,6 @@ export default function CheckJoin({currentSlideIndex}:  {currentSlideIndex: numb
       setIsFormValid(false);
     }
     console.log(joinCheckForm);
-    console.log(isStopShowToday);
   }, [isStopShowToday, joinCheckForm]);
 
   useEffect(() => {

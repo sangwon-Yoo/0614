@@ -10,9 +10,11 @@
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,md}\""
   },
   "dependencies": {
+    "@types/luxon": "^3.6.2",
     "@types/react-copy-to-clipboard": "^5.0.7",
     "framer-motion": "^11.16.0",
     "lottie-react": "^2.4.1",
+    "luxon": "^3.6.1",
     "next": "15.1.2",
     "react": "^19.0.0",
     "react-copy-to-clipboard": "^5.1.0",
