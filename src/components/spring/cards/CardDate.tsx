@@ -1,13 +1,15 @@
-import { DDayInfo } from '@/app/invitation/apis/get/dDay/route';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+
+
+export type DDayInfo = {remains: string; dDay: string;};
 
 export default function CardDate({currentSlideIndex}: {currentSlideIndex: number}) {
 
   const getNow = async () => {
     try {
-      return (await fetch('/invitation/apis/get/dDay')).json() as Promise<DDayInfo>;
+      return (await fetch('/invitation/apis/dDay')).json() as Promise<DDayInfo>;
     } catch (error) {
       console.error(error);
     }
@@ -16,7 +18,7 @@ export default function CardDate({currentSlideIndex}: {currentSlideIndex: number
 
   useEffect(() => {
     getNow().then(data => {
-      console.log(dDayInfo?.remains)
+      console.log(data);
       setDDayInfo(data)
     });
   }, []);
