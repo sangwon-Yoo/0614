@@ -1,3 +1,5 @@
+import { NextConfig } from 'next';
+
 const nextConfig: NextConfig = {
   /* config options here */
   async redirects() {
