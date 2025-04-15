@@ -97,7 +97,7 @@ export default function CheckJoin({currentSlideIndex}:  {currentSlideIndex: numb
                 });
               }}
               id={'input-name'} type={'text'} name={'name'}
-              placeholder={'홍길동'}
+              placeholder={'변우석'}
               className={'w-[60%] h-6 pl-1 bg-white rounded-sm border border-gray-300 outline-offset-2 outline-red-200 focus:outline-1'}
             />
           </div>
@@ -116,7 +116,7 @@ export default function CheckJoin({currentSlideIndex}:  {currentSlideIndex: numb
                 });
               }}
               value={joinCheckForm.with}
-              placeholder={'0'}
+              placeholder={'0 (본인 제외)'}
               inputMode={'numeric'}
               maxLength={2}
               step={'1'}
